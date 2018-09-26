@@ -1,0 +1,13 @@
+<?xml version="1.0" standalone="yes"?>
+
+<svg viewBox="0.0 0.0 150 150" fill="none" stroke="none" stroke-linecap="square" stroke-miterlimit="10" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" >
+     <defs>
+        <linearGradient id='grad'>
+        <stop stop-color='#443548'/>
+        <stop offset='100%' stop-color='#e94635'/>
+        </linearGradient>
+    </defs>
+    <g>
+        <polygon points="150,300 280,225 280,75 150,0 20,75 20,225" fill-opacity="1.0" stroke="url(#grad)" stroke-width="5" transform='scale(0.5)'></polygon>
+    </g>
+</svg>

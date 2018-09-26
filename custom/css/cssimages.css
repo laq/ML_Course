@@ -1,0 +1,23 @@
+.pie {
+  width: 300px; height: 300px;
+  border-radius: 50%;
+  background: yellowgreen;
+  background-image:linear-gradient(to right, transparent 50%, #655 0);
+  margin: 0 auto;
+}
+
+.reveal .white-font {
+  color: #fff; 
+}
+
+.reveal .red-font {
+  color: #f00; 
+}
+
+.reveal .blue-font {
+  color: #00f; 
+}
+
+.reveal .grey-font{
+  color: #888;
+}

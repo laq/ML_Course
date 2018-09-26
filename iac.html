@@ -1,0 +1,384 @@
+<!doctype html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>S4N</title>
+    <link rel="stylesheet" href="css/reveal.css">
+    <link rel="stylesheet" href="css/theme/seven.css">
+    <!-- Theme used for syntax highlighting of code -->
+    <link rel="stylesheet" href="lib/css/zenburn.css">
+    <link rel="stylesheet" href="custom/css/cssimages.css">
+    <!-- Printing and PDF exports -->
+    <script>
+            var link = document.createElement( 'link' );
+            link.rel = 'stylesheet';
+            link.type = 'text/css';
+            link.href = window.location.search.match( /print-pdf/gi ) ? 'css/print/pdf.css' : 'css/print/paper.css';
+            document.getElementsByTagName( 'head' )[0].appendChild( link );
+
+    </script>
+</head>
+<body>
+<div id="left"></div>
+<div id="right"></div>
+<div id="top"></div>
+<div id="bottom"></div>
+<div class="reveal">
+    <div class="slides">
+
+        <!--Main Title-->
+        <section data-background="url('images/logo_esquina_intro_end.svg'), linear-gradient(to right, #443548, #b71930, #e94635)"
+                 data-background-position="right bottom" data-background-repeat="no-repeat">
+            <img class="no-border" width="5%" src="images/rombo.svg"/>
+            <img class="no-border" width="13%" src="images/s4n.svg"/>
+            <h1 class="white-font">Infrastructura</h1>
+        </section>
+
+        <!--Quote-->
+        <section>
+            <h4>
+                <blockquote>
+                    &ldquo;Every developer or support person dreads a moment like this when they have to reconfigure the servers, because of the different aspects involved in the seemingly tedious process. But it doesn't always have be to like this.&rdquo;
+                </blockquote>
+            </h4>
+        </section>
+
+        <!--Contenido-->
+        <section data-background="url('images/logo_esquina.svg')" data-background-position="right bottom" data-background-repeat="no-repeat">
+
+           <section>
+                <h2>Contenido</h2>
+                <ul>
+                    <li> Conceptos</li>
+                    <li> Infraestructura como Código</li>
+                    <li> Taller Práctico</li>
+                </ul>
+            </section>
+
+        </section>
+
+        <!--Conceptos-->
+        <section data-background="url('images/logo_esquina.svg')" data-background-position="right bottom" data-background-repeat="no-repeat">
+
+            <!--Title-->
+            <section>
+                <img style="float: left" class="no-border" width="10%" src="images/rombo.svg"/>
+                <h1 style="font-size: 2.0em;">Conceptos</h1>
+            </section>
+
+            <!--Ganado vs Mascotas - frases-->
+            <section>
+                <h3>Ganado vs Mascotas</h3>
+                <table>
+                    <tbody>
+                    <p><center><img src="images/iac/pets_vs_cattle.png" class="no-border" width="65%"></center></p>
+                    <tr>
+                        <td style="font-size: 0.7em;"><i>"You name them and when they get sick, you nurse them back to health"</i></td>
+                        <td style="font-size: 0.7em;"><i>"You number them, and when they get sick you shoot them and get another one."</i></td>
+                    </tr>
+                    </tbody>
+                </table>
+            </section>
+
+            <!--Ganado vs Mascotas - diferencias-->
+            <section>
+                <h3>Ganado vs Mascotas</h3>
+                <center><table>
+                    <tbody>
+                    <p><center><img src="images/iac/pets_vs_cattle.png" class="no-border" width="65%"></center></p>
+                    <tr>
+                        <td style="font-size: 0.7em;">Nombres como miservidor.querido.com</td>
+                        <td style="font-size: 0.7em;">Nombres como servidor1520.dominio.com</td>
+                    </tr>
+                    <tr>
+                        <td style="font-size: 0.7em;">Amorosamente creados a mano. Únicos e indispensables.</td>
+                        <td style="font-size: 0.7em;">Iguales a cualquier otro servidor. Reemplazables.</td>
+                    </tr>
+                    <tr>
+                        <td style="font-size: 0.7em;">Días/semanas en crearse. Puede requerir proyectos de migración para recrearse en otro lado</td>
+                        <td style="font-size: 0.7em;">Se crean, modifican, destruyen y recrean en minutos a partir de scripts.</td>
+                    </tr>
+                    </tbody>
+                </table></center>
+            </section>
+
+            <!--Ganado vs Mascotas - diferencias-->
+            <section>
+                <h3>Ganado vs Mascotas</h3>
+                <center><table>
+                    <tbody>
+                    <p><center><img src="images/iac/pets_vs_cattle.png" class="no-border" width="65%"></center></p>
+                    <tr>
+                        <td style="font-size: 0.7em;">Se modifican sólo en ventanas de mantenimiento y por personas con privilegios especiales</td>
+                        <td style="font-size: 0.7em;">Se modifican en cualquier momento mediante scripts que no requieren privilegios.</td>
+                    </tr>
+                    </tbody>
+                </table></center>
+            </section>
+
+            <!--Ganado vs Mascotas - diferencias-->
+            <section>
+                <h3>Ganado vs Mascotas</h3>
+                <center><table>
+                    <tbody>
+                    <p><center><img src="images/iac/pets_vs_cattle.png" class="no-border" width="65%"></center></p>
+                    <tr>
+                        <td style="font-size: 0.7em;">Varios requipos involucrados en aprovisionar un solo ambiente.</td>
+                        <td style="font-size: 0.7em;">Un solo click cubre varios niveles (computación, redes, almancentamiento, otros)</td>
+                    </tr>
+                    <tr>
+                        <td style="font-size: 0.7em;">Es estática, requiere excederse en la capacidad planeada para soportar picos </td>
+                        <td style="font-size: 0.7em;">La infraestructura es elástica y escala de manera automática durante picos.</td>
+                    </tr>
+                    </tbody>
+                </table></center>
+            </section>
+
+            <!--Fénix vs. Copo de Nieve - frases-->
+            <section>
+                <h3>Fénix vs. Copo de Nieve</h3>
+                <table>
+                    <tbody>
+                    <p><center><img src="images/iac/phoenix_vs_snowflakes.png" class="no-border" width="65%"></center></p>
+                    <tr>
+                        <td style="font-size: 0.7em;"><i>"The result is a unique snowflake: good for a ski resort, bad for a data center."</i></td>
+                        <td style="font-size: 0.7em;"><i>"A server should be like a phoenix, regularly rising out of the ashes."</i></td>
+                    </tr>
+                    </tbody>
+                </table>
+            </section>
+
+            <!--Fénix vs. Copo de Nieve - Copo-->
+            <section>
+                <h3>Servidores Copo de Nieve</h3>
+                <p><center></center></p>
+                <p>
+                    <img src="images/iac/snowflake.png" class="no-border" width="15%">
+                <ul>
+                    <li style="font-size: 0.8em;"><b>Son únicos:</b> Han sido altamente modificados de su estado actual. Por esto su estado es difícil de reproducir</li>
+                    <li style="font-size: 0.8em;"><b>Son fŕagiles:</b> Cualquier cambio puede llevar a errores. Cualquier intento de arreglar esos errores lleva a más errores</li>
+                    <li style="font-size: 0.8em;"><b>Son bellos:</b> Hasta que debemos que cambiarlos nuevamente.</li>
+                </ul></p>
+            </section>
+
+            <!--Fénix vs. Copo de Nieve - Fénix-->
+            <section>
+                <h3>Servidores Fénix</h3>
+                <p><img src="images/iac/phoenix.png" class="no-border" width="20%"></p>
+                <p style="font-size: 0.8em;"><b>Se consumen hasta las cenizas y reviven de ellas.</b></p>
+                <ul>
+                    <li style="font-size: 0.7em;">Instanciados desde cero.</li>
+                    <li style="font-size: 0.7em;">Su instanciación está definida de forma automática siguiendo una "receta".</li>
+                    <li style="font-size: 0.7em;">No importa cuántas veces optemos por destruirlos, siempre podremos recrearlos.</li>
+                    <li style="font-size: 0.7em;">Los cambios de estos servidores se encuentran versionados.</li>
+                </ul></p>
+            </section>
+
+            <!--Infraestructura Inmutable-->
+            <section>
+                <h3>Infraestructura Inmutable</h3>
+                <p><img src="images/iac/immutable_definition.png" class="no-border" width="80%"></p>
+                <p class="fragment" style="font-size: 0.8em;"><b>La característica de ser inmutable aplica para
+                    objetos que una vez son creados no pueden ser modificados</b></p>
+            </section>
+
+            <!--Servidores Inmutables-->
+            <section>
+                <h3>Ciclo de Vida de Servidores Fénix</h3>
+                <p><img src="images/iac/PhoenixServerLifecycle.png" class="no-border" width="80%"></p>
+                <p class="fragment" style="font-size: 0.7em;">Destruir y recrear servidores constantemente nos llevan
+                    a un estado inicial conocido y versionado (pero no final)</p>
+                <aside class="notes">
+                    Estado completo de un servidor fénix: imagen base + configuración + datos
+                    Es más fácil aplicar las configuraciones a las imágenes base que a sistemas corriendo.
+                </aside>
+            </section>
+
+            <!--Servidores Inmutables-->
+            <section>
+                <h3>Servidores Inmutables</h3>
+                <blockquote cite="https://landing.google.com/sre/book/chapters/introduction.html">
+                    &ldquo;A server that once deployed, is never modified, merely replaced with a new updated instance&rdquo;
+                </blockquote>
+            </section>
+
+            <!--Servidores Inmutables-->
+            <section>
+                <h3>Ciclo de Vida de Servidores Inmutables</h3>
+                <p><img src="images/iac/ImmutableServerLifecycle.png" class="no-border" width="80%"></p>
+                <p style="font-size: 0.7em;">¿Qué pasa si creamos servidores configurados una sola vez?</p>
+            </section>
+
+            <!--Servidores Inmutables-->
+            <section>
+                <h3>Servidores Inmutables</h3>
+                <p>¿Ventajas?<ul>
+                <li class="fragment" style="font-size: 0.8em;">Mayor consistencia entre diferentes ambientes</li>
+                <li class="fragment" style="font-size: 0.8em;">Procesos de aprovisionamiento más confiables</li>
+                <li class="fragment" style="font-size: 0.8em;">Mayor velocidad en el aprovisionamiento de nuevos ambientes</li>
+                <li class="fragment" style="font-size: 0.8em;">Procesos de evolución de servidores más rápidos y manejables</li>
+            </ul></p>
+                <aside class="notes">
+                    <p>Saber qué tiene una máquina instalado, quitar o agregar paquetes es algo que se puede
+                    hacer todo el tiempo.</p>
+                    <p>Por ejemplo requiere menos pasos no instalar un paquete que que quitar un paquete de un servidor
+                        pero esto solo sucede cuando instalamos todo desde cero una vez</p>
+                </aside>
+            </section>
+
+            <!--Infraestructura Inmutable-->
+            <section>
+                <h3>Infraestructura Inmutable</h3>
+                <p><ul>
+                    <li class="fragment" style="font-size: 0.9em;">¿Podríamos/deberíamos tratar toda nuestra infraestructura como Inmutable?</li>
+                    <li class="fragment" style="font-size: 0.9em;">¿Qué desventajas o consideraciones existen en este caso?</li>
+                <p><ul>
+                <li class="fragment" style="font-size: 0.7em;">¿Qué pasa cuando tenemos datos no desechables en los servidores? (logs, bases de datos)</li>
+                <li class="fragment" style="font-size: 0.7em;">¿En qué medida se ven afectados los tiempos de despliegue si todo debe ser recreado cuando existen cambios?</li>
+            </ul></p></ul></p>
+            </section>
+
+            <!--Chaos Engineering-->
+            <section>
+                <h3>Chaos Engineering</h3>
+                <p><img src="images/iac/chaos_monkey.png" align="right" class="no-border" width="40%"></p>
+                <p style="font-size: 0.6em;"><i>"a tool that randomly disables our production instances to make sure we can survive this common type of failure without any customer impact"</i></p>
+                <p style="font-size: 0.6em;"><i>"...it has terminated over 65,000 instances running in our production and testing environments. Most of the time nobody notices, but we continue to find surprises caused by Chaos Monkey which allows us to isolate and resolve them so they don't happen again."</i></p>
+            </section>
+
+        </section>
+
+        <!--Infraestructura como código-->
+        <section data-background="url('images/logo_esquina.svg')" data-background-position="right bottom" data-background-repeat="no-repeat">
+
+            <!--Title-->
+            <section>
+                <img style="float: left" class="no-border" width="10%" src="images/rombo.svg"/>
+                <h1 style="font-size: 2.0em;">Infraestructura Como Código</h1>
+            </section>
+
+            <section>
+                <h3>Infraestructura Como Código</h3>
+                <p><img src="images/iac/iac_k_morris.jpg" class="no-border" width="100%"></p>
+            </section>
+
+            <section>
+                <h3>Infraestructura Como Código</h3>
+                <p><img src="images/iac/s4n_iac.png" class="no-border" width="100%"></p>
+            </section>
+
+            <!--Infraestructura Como Código-->
+            <section>
+                <h3>Infraestructura Como Código</h3>
+                <p><ul>
+                    <li style="font-size: 0.8em;">Infraestructura programable.</li>
+                    <li style="font-size: 0.8em;">No implica solamente usar scripts que nos permitan repetir pasos en aprovisionamiento y despliegue.</li>
+                    <li style="font-size: 0.8em;">Software especializado y prácticas de desarrollo que se usan en aplicación</li>
+                <p><ul>
+                <li style="font-size: 0.7em;">Versionamiento</li>
+                <li style="font-size: 0.7em;">Pruebas</li>
+                <li style="font-size: 0.7em;">Despliegues pequeños</li>
+                <li style="font-size: 0.7em;">Patrones de diseño</li>
+            </ul></p></ul></p>
+
+            </section>
+
+            <!--Infraestructura Como Código-->
+            <section>
+                <h3>Herramientas</h3>
+                <p class="fragment">
+                    <img src="images/iac/docker_logo.png" class="no-border" width="100px">
+                    <img src="images/dim_terraform.svg" class="no-border" width="100px">
+                    <img src="images/dim_cloudformation.png" class="no-border" width="100px">
+                    <img src="images/dim_azure_rm.png" class="no-border" width="100px">
+                    <img src="images/dim_google_dm.png" class="no-border" width="100px">
+                    <img src="images/dim_xen.svg.png" class="no-border" width="100px">
+                    <img src="images/iac/vagrant_logo.png" class="no-border" width="200px">
+                </p>
+                <p class="fragment">
+                    <img src="images/dim_ansible.png" class="no-border" width="200px">
+                    <img src="images/iac/example_ansible.png" class="no-border" width="70%">
+                </p>
+
+            </section>
+
+        </section>
+
+        <!--Ejercicio-->
+
+        <section data-background="url('images/logo_esquina.svg')" data-background-position="right bottom" data-background-repeat="no-repeat">
+
+            <!--Title-->
+            <section>
+                <img style="float: left" class="no-border" width="10%" src="images/rombo.svg"/>
+                <h1 style="font-size: 2.0em;">Taller Práctico</h1>
+            </section>
+
+            <section>
+                <h3>Objetivo</h3>
+                <p>En este laboratorio vamos a instanciar una arquitectura en nube (AWS) mediante un script en terraform</p>
+            </section>
+
+            <section>
+                <h3>Infraestructura Codificada</h3>
+                <p><center><img src="images/iac/taller_infra.png" class="no-border" width="65%"></center></p>
+            </section>
+
+            <!--Instrucciones-->
+            <section>
+                <p style="font-size: 0.8em;">Algunas actividades que realizaremos:</p>
+                <ul style="font-size: 0.8em;">
+                    <li>Instalar <a href="https://www.terraform.io/downloads.html">Terraform</a></li>
+                    <li><a href="https://www.terraform.io/intro/index.html">Introducción</a> a Terraform</li>
+                    <li> <a href="https://www.terraform.io/intro/getting-started/build.html">Tutorial Construcción</a></li>
+                    <li>Identificar los archivos y directorios principales del proyecto</li>
+                    <li>Análisis del código del proyecto</li>
+                    <ul style="font-size: 0.8em;">
+                        <li>¿Qué función tienen?</li>
+                        <li>¿Es posible definir parámetros?</li>
+                        <li>¿Qué es un módulo?</li>
+                        <li>¿Encuentra en el proyecto algo imilar a lo que usamos usualmente en un proyecto de software?</li>
+                    </ul>
+                    <li>Instalar <a href="https://docs.microsoft.com/en-us/cli/azure/install-azure-cli?view=azure-cli-latest">Azure Cli</a></li>
+                    <li>
+                        Estudiar lo que necesitaríamos para recrear una infraestructura similar en azure: <a href="https://docs.microsoft.com/en-us/azure/virtual-machines/linux/terraform-install-configure">ejemplo</a>
+                    </li>
+                </ul>
+                <aside class="notes">
+                    https://docs.microsoft.com/en-us/azure/virtual-machines/linux/terraform-install-configure
+                    https://docs.microsoft.com/en-us/cli/azure/create-an-azure-service-principal-azure-cli?view=azure-cli-latest
+                </aside>
+            </section>
+
+        </section>
+
+        <!--Que gracias-->
+        <section data-background="url('images/logo_esquina_intro_end.svg'), linear-gradient(to right, #443548, #b71930, #e94635)"
+                 data-background-position="right bottom" data-background-repeat="no-repeat">
+            <h1 class="white-font">Muchas Gracias</h1>
+        </section>
+
+    </div>
+</div>
+<script src="lib/js/head.min.js"></script>
+<script src="js/reveal.js"></script>
+<script>
+                // More info about config & dependencies:
+                // - https://github.com/hakimel/reveal.js#configuration
+                // - https://github.com/hakimel/reveal.js#dependencies
+                Reveal.initialize({
+                    defaultTiming: 120,
+                    zoomKey: 'shift',
+                    dependencies: [
+                        { src: 'plugin/markdown/marked.js' },
+                        { src: 'plugin/markdown/markdown.js' },
+                        { src: 'plugin/zoom-js/zoom.js', async: true },
+                        { src: 'plugin/highlight/highlight.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } },
+                        { src: 'plugin/notes/notes.js', async: true }
+                    ]
+                });
+
+</script>
+</body>
+</html>

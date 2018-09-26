@@ -1,0 +1,1098 @@
+<!doctype html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>S4N</title>
+    <link rel="stylesheet" href="css/reveal.css">
+    <link rel="stylesheet" href="css/theme/seven.css">
+    <!-- Theme used for syntax highlighting of code -->
+    <link rel="stylesheet" href="lib/css/zenburn.css">
+    <link rel="stylesheet" href="custom/css/cssimages.css">
+    <!-- Printing and PDF exports -->
+    <script>
+            var link = document.createElement( 'link' );
+            link.rel = 'stylesheet';
+            link.type = 'text/css';
+            link.href = window.location.search.match( /print-pdf/gi ) ? 'css/print/pdf.css' : 'css/print/paper.css';
+            document.getElementsByTagName( 'head' )[0].appendChild( link );
+    </script>
+</head>
+
+<body>
+<div id="left"></div>
+<div id="right"></div>
+<div id="top"></div>
+<div id="bottom"></div>
+<div class="reveal">
+    <div class="slides">
+        <section data-background="url('images/logo_esquina_intro_end.svg'), linear-gradient(to right, #443548, #b71930, #e94635)"
+                 data-background-position="right bottom" data-background-repeat="no-repeat">
+            <img class="no-border" width="5%" src="images/rombo.svg"/>
+            <img class="no-border" width="13%" src="images/s4n.svg"/>
+            <h1 class="white-font">Devops</h1>
+            <blockquote class="white-font" cite="https://landing.google.com/sre/book/chapters/introduction.html">
+                &ldquo;Hope is not a strategy.&rdquo;
+            </blockquote>
+        </section>
+
+        <!-- ¿En donde estamos ahora? Puntos en común: Proyectos de Software -->
+        <section data-background="url('images/logo_esquina.svg')" data-background-position="right bottom" data-background-repeat="no-repeat">
+
+            <section>
+                <img style="float: left" class="no-border" width="10%" src="images/rombo.svg"/>
+                <h1>Proyectos de Software</h1>
+                <blockquote>
+                   &ldquo;The definition of insanity is doing the same thing over and over again and expecting different results.&rdquo;<b> -- A. Einstein</b>
+                </blockquote>
+            </section>
+
+            <section data-background="url('images/timee.jpg')" data-background-size="13%" data-background-repeat="no-repeat"
+                     data-background-position="5% 8%">
+                <h2>Enfoque clásico</h2>
+                <ul>
+                    <li class="fragment"><b>Características del Producto</b></li>
+                    <ul>
+                        <li class="fragment">¿Qué?</li>
+                        <li class="fragment">Funcionales</li>
+                        <li class="fragment">No funcionales</li>
+                        <li class="fragment"><b>Personas: conocimiento técnico</b></li>
+                    </ul>
+                </ul>
+                <ul>
+                    <li class="fragment"><b>Características del Proceso</b></li>
+                    <ul>
+                        <li class="fragment">¿Cómo?</li>
+                        <li class="fragment">Tiempo de Cíclo</li>
+                        <li class="fragment"><b>Personas: habilidades blandas</b></li>
+                    </ul>
+                </ul>
+            </section>
+
+            <section class="stretch">
+                <table class="stretch">
+                    <tbody  class="stretch">
+                        <tr class="fragment">
+                            <td>Accesible</td>
+                            <td>Adaptable</td>
+                            <td>Auditable</td>
+                        </tr>
+                        <tr class="fragment">
+                            <td>Versionable</td>
+                            <td>Recuperable</td>
+                            <td>Certificable</td>
+                        </tr>
+                        <tr class="fragment">
+                            <td>Integro</td>
+                            <td>Documentado</td>
+                            <td>Durable</td>
+                        </tr>
+                        <tr class="fragment">
+                            <td>Eficiente</td>
+                            <td>Efectivo</td>
+                            <td>Resiliente</td>
+                        </tr>
+                        <tr class="fragment">
+                            <td>Interoperable</td>
+                            <td>Mantenible</td>
+                            <td>Modificable</td>
+                        </tr>
+                        <tr class="fragment">
+                            <td>Seguro</td>
+                            <td>De calidad</td>
+                            <td>Entendible</td>
+                        </tr>
+                        <tr class="fragment">
+                            <td>Responsive</td>
+                            <td>Robusto</td>
+                            <td>Escalable</td>
+                        </tr>
+                        <tr class="fragment">
+                            <td>Compatible</td>
+                            <td>Testeable</td>
+                            <td>Monitoreable</td>
+                        </tr>
+                        <tr class="fragment">
+                            <td>Disponible</td>
+                            <td>Administrable</td>
+                            <td>Efectivo</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </section>
+
+            <section data-background="url('images/soft_engine.jpg')" data-background-size="13%" data-background-repeat="no-repeat"
+                     data-background-position="90% 8%">
+                <h2>Personas - Roles</h2>
+                <table class="stretch"><tbody class="stretch">
+                    <tr class="fragment"><td>Software Architects</td><td>Networking Engineers</td><td>Developers</td></tr>
+                    <tr class="fragment"><td>Build Engineer</td><td>System Retrabitrty Engineers</td><td>Automation Engineers</td></tr>
+                    <tr class="fragment"><td>Security Official</td><td>Functional Testers</td><td>Non Functional Testers</td></tr>
+                    <tr class="fragment"><td>Designers</td><td>Cloud Engineers</td><td>Gerentes de Proyecto</td></tr>
+                </tbody></table>
+            </section>
+
+            <section data-background="url('images/itil_six.jpg')" data-background-size="13%" data-background-repeat="no-repeat"
+                     data-background-position="3% 22%">
+                <h2>Conceptos del Enfoque clásico</h2>
+                <ul>
+                    <li class="fragment">ROI - KPIs</li>
+                    <li class="fragment">Lead Time - Cycle Time</li>
+                    <li class="fragment">MTBF: Mean Time Between Failures</li>
+                    <li class="fragment">MTTR: Mean Time To Recover</li>
+                    <li class="fragment">Value Stream Mapping</li>
+                    <li class="fragment">Kaizen</li>
+                    <li class="fragment">Bus Factor</li>
+                    <li class="fragment">Six Sigma</li>
+                </ul>
+            </section>
+
+            <section>
+                <h2>Errare humanum est</h2>
+                <img src="images/problemas.png" />
+            </section>
+
+            <section>
+                <h2>Despliegues Famosos (por las consecuencias negativas)</h2>
+                <p>
+                <ul>
+                    <li class="fragment"><b>Negocios:</b>
+                        <ul>
+                            <li class="fragment"><b>Vancouver Stock Exchange</b>: redondeo</li>
+                            <li class="fragment"><a href="https://en.wikipedia.org/wiki/Knight_Capital_Group"><b>Knight Capital Group</b></a>: perdieron 440 millones de dólares en 45 minutos</li>
+                        </ul>
+                    </li>
+                    <li class="fragment"><b>Videojuegos:</b>
+                        <ul>
+                            <li><a href="http://www.pcworld.com/article/2871653/scary-steam-for-linux-bug-erases-all-the-personal-files-on-your-pc.html"><b>Steam</b></a>: actualización borraba las carpetas personales de los usuarios</li>
+                        </ul>
+<pre><code class="hljs">
+STEAMROOT="$(cd "${0%/*}" && echo $PWD)"
+rm -rf "$STEAMROOT/"*
+</code></pre>
+                    </li>
+                </ul>
+                </p>
+            </section>
+
+            <section>
+                <h2>Despliegues Famosos (por las consecuencias negativas)</h2>
+                <ul>
+                    <li class="fragment">
+                        <b>Criptografía:</b>
+                        <ul>
+                            <li><b>Apple Computer, Inc:</b> (Unreachable Code) aceptaba cualquier certificado digital</li>
+                        </ul>
+                    </li>
+                </ul>
+                <ul>
+                    <li class="fragment">
+                        <b>Seguimiento de Fechas:</b>
+                        <ul>
+                            <li><b>Bank of Queensland:</b> incorrecta conversión de un número hexadecimal</li>
+                        </ul>
+                    </li>
+                </ul>
+            </section>
+
+            <section data-background="url('images/problema.jpg')" data-background-size="15%" data-background-repeat="no-repeat"
+                     data-background-position="95% 40%">
+                <h2>Problemas (Producto y Proceso)</h2>
+                <ul>
+                    <li class="fragment">Aprovisionamiento de Ambientes</li>
+                    <li class="fragment">Despliegue de Software Manual</li>
+                    <li class="fragment">Frecuencia de Despliegues</li>
+                    <li class="fragment">Desplegar tarde en un ambiente Productivo</li>
+                    <li class="fragment">Configuración manual de ambientes</li>
+                    <li class="fragment">Inseguridad</li>
+                    <li class="fragment">Ciegos frente a Fallas</li>
+                </ul>
+            </section>
+
+            <section data-background="url('images/banana.jpg')" data-background-size="15%" data-background-repeat="no-repeat"
+                     data-background-position="95% 8%">
+                <h2>Banana Corp</h2>
+                <ul>
+                    <li class="fragment">Mejores devs y ops</li>
+                    <ul>
+                        <li class="fragment">Nuevas características: 1 día</li>
+                        <li class="fragment">Despliegues: 1 día</li>
+                        <li class="fragment">Comunicación: 8 días</li>
+                        <li class="fragment"><b>Tiempo de Cíclo: 10 días</b></li>
+                    </ul>
+                    <li class="fragment">Solicitud de mejora en tiempos</li>
+                    <ul>
+                        <li class="fragment">Mejora del 50% en cada área</li>
+                        <li class="fragment"><b>Tiempo de Cíclo: 9 días</b></li>
+                    </ul>
+                </ul>
+            </section>
+
+            <section>
+                <h2>Muro de la Confusión</h2>
+                <img src="images/confusion_wall.png" />
+            </section>
+
+            <section>
+                <h2>Muro de la Confusión</h2>
+                <img src="images/muro_confusion1.png" />
+            </section>
+
+            <section>
+                <h2>Organizaciones de Alto Redimiento</h2>
+                <p class="fragment">¿Alguien lo ha logrado?</p>
+                <p class="fragment">¿Resuelven estos problemas de la misma forma?</p>
+            </section>
+
+           <section>
+                <h2>Organizaciones de Alto Rendimiento</h2>
+                <ul>
+                    <li class="fragment">Despliegan más de 100 veces en Producción</li>
+                    <li class="fragment">Los recién contratados desplieguen en Producción</li>
+                </ul>
+            </section>
+
+            <section>
+                <h2>State of DevOps Report</h2>
+                <img src="images/it_performance.png" width="80%"  height="80%" />
+            </section>
+
+            <section>
+                <h2>No silver bullet</h2>
+                <ul>
+                    <li class="fragment">Las más grandes empresas han tenido fallas</li>
+                    <li class="fragment">Hacer Software es complejo</li>
+                </ul>
+                <math class="fragment" xmlns="http://www.w3.org/1998/Math/MathML" display="block">
+                  <mtext>complejidad</mtext> <mo>=</mo>
+                  <mrow>
+                    <mtext>log</mtext>
+                    <mfenced>
+                        <mfrac>
+                            <mrow>
+                                <mtext>elemento más grande</mtext>
+                            </mrow>
+                            <mrow>
+                                <mtext>elemento más pequeño</mtext>
+                            </mrow>
+                        </mfrac>
+                    </mfenced>
+                  </mrow>
+                </math>
+            </section>
+
+        </section>
+
+        <!--DevOps-->
+        <section data-background="url('images/logo_esquina.svg')" data-background-position="right bottom" data-background-repeat="no-repeat">
+
+            <section>
+                <img style="float: left" class="no-border" width="10%" src="images/rombo.svg"/>
+                <h1>DevOps</h1>
+            </section>
+
+            <section>
+                <img src="images/periodic.png" />
+            </section>
+
+            <section>
+                <h3>¿DevOps?</h3>
+                <img src="images/que_no_es.png" width="85%" height="85%" />
+                <aside class="notes">
+                    <ul>
+                        <li>¿Es un rol?</li>
+                        <li>¿Es un equipo aparte?</li>
+                        <li>¿Es una <a href="https://www.upguard.com/articles/itil-vs-devops">metodología</a>, tecnología o herramienta?</li>
+                        <li>¿Es combinar Desarrollo y Operaciones?</li>
+                        <li>¿Es automatización de todo?</li>
+                        <li>¿Es una estrategia que se puede aplicar siempre?</li>
+                    </ul>
+                </aside>
+            </section>
+
+            <section data-background="url('images/elephant.png')" data-background-size="20%" data-background-repeat="no-repeat"
+                     data-background-position="95% 45%">
+                <h2>Historia</h2>
+                <ul>
+                    <li class="fragment">Patrick Debois</li>
+                    <li class="fragment">Gene Kim</li>
+                    <li class="fragment">Jez Humble</li>
+                    <li class="fragment">John Willis</li>
+                </ul>
+            </section>
+
+            <section>
+                <h2>DevOps</h2>
+                <img src="images/devops.svg" width="50%" height="50%" />
+                <p class="fragment">¿DevSecOps?</p>
+            </section>
+
+            <section>
+                <h2>Los tres caminos</h2>
+                <img class="stretch" src="images/three_ways.jpg" width="120%" height="120%" />
+            </section>
+
+            <section>
+                <h2>Hábitos DevOps Kaizen</h2>
+                <ol>
+                    <li class="fragment">Comunicación</li>
+                    <li class="fragment">Pensamiento Local vs Global</li>
+                    <li class="fragment">Respeto</li>
+                    <li class="fragment">Confianza</li>
+                    <li class="fragment">Sin Víctimas</li>
+                    <li class="fragment">La prueba del olor</li>
+                    <li class="fragment">Matar al Dragón</li>
+                    <li class="fragment">Comportamiento sin Miedo</li>
+                    <li class="fragment">Atravezar el velo de IT</li>
+                    <li class="fragment">Shaman</li>
+                </ol>
+            </section>
+
+            <section>
+                <h2> Valores DevOps</h2>
+                <img src="images/devops_cams.png" width="60%" cite="http://talesmorais.com/2016/all-devops-culture-is-about-cams/" />
+            </section>
+
+            <section>
+                <h2>DevOps</h2>
+                <img src="images/technical_practices.png"/>
+                <img src="images/cultural_norms.png" />
+            </section>
+
+            <section>
+                <h2>DevOps como una Travesía</h2>
+                <img src="images/travesias.png"/>
+            </section>
+
+            <section>
+                <h2>State of DevOps Report</h2>
+                <img class="stretch" src="images/increase.png" width="80%"  height="80%" />
+            </section>
+
+            <section>
+                <img class="stretch" src="images/cluster.png" />
+            </section>
+
+            <section>
+                <h3>Porcentaje de trabajo realizado manualmente</h3>
+                <img class="stretch" src="images/manual.png" />
+            </section>
+
+            <section>
+                <h3>Explicación de <a href="https://www.youtube.com/watch?v=eRMhP2L19Gw&feature=youtu.be&t=10m16s">Yuji Kiriki</a></h3>
+            </section>
+
+            <section>
+                <iframe style="transform:rotate(270deg)" class="stretch" width="560" height="315" src="https://www.youtube.com/embed/eRMhP2L19Gw?start=616" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+            </section>
+
+            <section>
+                <h3>Explicación de <a href="https://www.youtube.com/watch?v=aoMfbgF2D_4&t=8m24s">Martin Fowler</a></h3>
+                <iframe class="stretch" width="560" height="315" src="https://www.youtube.com/embed/aoMfbgF2D_4?start=504" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+            </section>
+
+            <section>
+                <h3>Explicación de <a href="https://www.youtube.com/watch?v=aoMfbgF2D_4&t=8m24s">Martin Fowler</a></h3>
+                <ul>
+                    <li class="fragment">Fenómeno <b>Cultural</b></li>
+                    <li class="fragment">Los Desarrolladores de Aplicaciones deben ser <b>conscientes</b> de las necesidades de Operación</li>
+                    <li class="fragment">Las personas de Operación deben <b>facilitar</b> el despliegue</li>
+                    <li class="fragment"><b>Colaboración + Comunicación</b></li>
+                </ul>
+            </section>
+
+            <section>
+                <h3>DevOps</h3>
+                <p>No existe un acuerdo global de su definición.</p>
+            </section>
+
+            <section>
+                <h3>DevOps</h3>
+                <blockquote>
+                    Desarrolladores y Operaciones trabajando conjuntamente.
+                </blockquote>
+                    <blockquote>
+                    Desarrolladores, QA, Seguridad y Operaciones trabajando conjuntamente. (DevQASecOps ...)
+                </blockquote>
+            </section>
+
+            <section>
+                <h3>DevOps</h3>
+                <blockquote>
+                    <ul>
+                    <li class="fragment"><b>DevOps</b> es una <b>Cultura de Confianza y Colaboración</b></li>
+                    <li class="fragment">en la cual las personas usan las <b>Herramientas</b> adecuadas</li>
+                    <li class="fragment">para <b>automatizar</b></li>
+                    <li class="fragment">y así poder garantizar una <b>Entrega Continua</b>.</li>
+                    </ul>
+                </blockquote>
+            </section>
+
+            <section>
+                <h2>¿Organizaciones de Alto Rendimiento practican DevOps?</h2>
+            </section>
+
+            <section>
+                <iframe class="stretch" width="560" height="315" src="https://www.youtube.com/embed/uTEL8Ff1Zvk" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+            </section>
+
+            <section>
+                <h2>Google</h2>
+                <table>
+                    <thead>
+                        <tr>
+                            <th><b>DevOps</b></th>
+                            <th><b>SRE</b></th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Herramientas y Automatización</td>
+                            <td>Automatización y Minimización de trabajo manual</td>
+                        </tr>
+                        <tr>
+                            <td>Medir Todo</td>
+                            <td>Ve Operaciones como problema de software y define formas para medir disponibilidad, tiempo de arranque, daños, latencias, etc.</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </section>
+
+            <section>
+                <h2>Google</h2>
+                <table>
+                    <thead>
+                        <tr>
+                            <th><b>DevOps</b></th>
+                            <th><b>SRE</b></th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Minimiza Silos Organizacionales</td>
+                            <td>Comparte Empoderamiento</td>
+                        </tr>
+                        <tr>
+                            <td>Accepta Fallos</td>
+                            <td>Balance de Accidentes y Fallos con Nuevas Versiones</td>
+                        </tr>
+                        <tr>
+                            <td>Cambios Graduales</td>
+                            <td>Reducir costo de Fallos</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </section>
+
+            <section>
+                <h2>Google</h2>
+                <table>
+                    <thead>
+                        <tr>
+                            <th><b>DevOps</b></th>
+                            <th><b>SRE</b></th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Herramientas y Automatización</td>
+                            <td>Automatización y Minimización de trabajo manual</td>
+                        </tr>
+                        <tr>
+                            <td>Medir Todo</td>
+                            <td>Ve Operaciones como problema de software y define formas para medir disponibilidad, tiempo de arranque, daños, latencias, etc.</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </section>
+
+            <section>
+                <img src="images/netflix.jpg" width="40%" height="40%" />
+                <ul>
+                    <li class="fragment">AWS - Akamai - Netflix Open Connect</li>
+                    <li class="fragment">100s de microservicios</li>
+                    <li class="fragment">1'000s de cambios en Producción Diarios</li>
+                    <li class="fragment">10'000s instancias virtuales</li>
+                </ul>
+            </section>
+
+            <section>
+                <img src="images/netflix.jpg" width="40%" height="40%" />
+                <ul>
+                    <li class="fragment">100'000s interacciones de usuarios por segundo</li>
+                    <li class="fragment">1'000'000s interacciones de usuarios</li>
+                    <li class="fragment">1'000'000'000s de métricas en series de tiempo</li>
+                    <li class="fragment">10'000'000'000s de horas cada trimestre</li>
+                </ul>
+            </section>
+
+            <section>
+                <img src="images/netflix.jpg" width="40%" height="40%" />
+                <ul>
+                    <li class="fragment">10s ingenieros de operaciones</li>
+                    <li class="fragment">0 NOCs (Network Ops Centers)</li>
+                </ul>
+            </section>
+
+            <section>
+                <h2>Cultura de Netflix</h2>
+                <ul>
+                    <li class="fragment">Sistemas que no dicen que no: libertad y responsabilidad</li>
+                    <li class="fragment">No siempre en servicios: velocidad de inovación</li>
+                    <li class="fragment">Sin procesos ni procedimientos: confianza</li>
+                    <li class="fragment">Sin control: contexto</li>
+                    <li class="fragment">Sin estandards: todo es permitido</li>
+                    <li class="fragment">Sin muros: "usted lo crea, usted lo ejecuta en producción"</li>
+                    <li class="fragment">Sin adivinar: datos</li>
+                    <li class="fragment">Sin devops: cultura</li>
+                </ul>
+            </section>
+
+            <section>
+                <h2>Facebook</h2>
+                <ol>
+                    <li class="fragment">SRE</li>
+                    <ol>
+                        <li class="fragment">Systems Reliability Operations</li>
+                        <li class="fragment">App Ops</li>
+                        <ol>
+                            <li class="fragment">Production Engineers</li>
+                        </ol>
+                    </ol>
+                </ol>
+            </section>
+
+            <section>
+                <h2>Facebook</h2>
+                <p>Production Engineer</p>
+                <ul>
+                    <li class="fragment">Trabajan en herramientas que se necesitarán</li>
+                    <li class="fragment">No arreglan problemas de desarrolladores</li>
+                    <li class="fragment">Monitoreo</li>
+                    <li class="fragment">Automatización: operaciones debe programar</li>
+                    <li class="fragment">Aprender de los Errores</li>
+                </ul>
+            </section>
+
+            <section>
+                <h3>DevOps en S4N</h3>
+                <blockquote>
+                    <p><b>Equipo</b> que cuenta con la <b>experiencia</b> y el <b>conocimiento</b> necesario para analizar y retroalimentar proyectos y productos de Software mejorando su:</p>
+                    <ul>
+                        <li class="fragment">tiempo de entrega</li>
+                        <li class="fragment">calidad</li>
+                        <li class="fragment">operabilidad / administración</li>
+                        <li class="fragment">visualización / transparencia</li>
+                    </ul>
+                </blockquote>
+            </section>
+
+            <section>
+                <h2>Actividad</h2>
+                <p>Desde su rol dentro del proyecto de software responda:</p>
+                <ol>
+                    <li>¿Qué problemas ha identificado comunmente?</li>
+                    <li>¿Cómo los solucionaría?</li>
+                    <li>¿Qué ha hecho su equipo para solucionarlo?</li>
+                    <li>¿Cree que hay una solución automatizable o implica un cambio de cultura o procedimientos manuales?</li>
+                </ol>
+            </section>
+
+        </section>
+
+        <!--Dimensiones del Software-->
+        <section data-background="url('images/logo_esquina.svg')" data-background-position="right bottom" data-background-repeat="no-repeat">
+
+            <section>
+                <img style="float: left" class="no-border" width="6%" src="images/rombo.svg"/>
+                <h1>Dimensiones del Software</h1>
+            </section>
+
+            <section>
+                <h3>Dimensiones</h3>
+                <p class="fragment">Infraestructura <span class="white-font highlight-blue fragment">como código</span></p>
+                <p class="fragment">Configuración <span class="white-font highlight-blue fragment">como código</span></p>
+                <p class="fragment">Aplicaciones</p>
+                <p class="fragment">Datos <span class="white-font highlight-blue fragment">como código</span></p>
+            </section>
+
+            <section>
+                <table>
+                    <tbody>
+                        <tr>
+                            <td></td>
+                            <td>IaC</td>
+                            <td>CaC</td>
+                            <td>A</td>
+                            <td>DaC</td>
+                        </tr>
+                        <tr>
+                            <td>Versionar</td>
+                            <td><input type="checkbox" id="vi" onchange="actualizar_resultado()"></td>
+                            <td><input type="checkbox" id="vc" onchange="actualizar_resultado()"></td>
+                            <td><input type="checkbox" id="va" onchange="actualizar_resultado()"></td>
+                            <td><input type="checkbox" id="vd" onchange="actualizar_resultado()"></td>
+                        </tr>
+                        <tr>
+                            <td>Probar</td>
+                            <td><input type="checkbox" id="pi" onchange="actualizar_resultado()"></td>
+                            <td><input type="checkbox" id="pc" onchange="actualizar_resultado()"></td>
+                            <td><input type="checkbox" id="pa" onchange="actualizar_resultado()"></td>
+                            <td><input type="checkbox" id="pd" onchange="actualizar_resultado()"></td>
+                        </tr>
+                        <tr>
+                            <td>Asegurar</td>
+                            <td><input type="checkbox" id="ai" onchange="actualizar_resultado()"></td>
+                            <td><input type="checkbox" id="ac" onchange="actualizar_resultado()"></td>
+                            <td><input type="checkbox" id="aa" onchange="actualizar_resultado()"></td>
+                            <td><input type="checkbox" id="ad" onchange="actualizar_resultado()"></td>
+                        </tr>
+                    </tbody>
+                </table>
+                <label id="resultado">0</label>
+                <label id="perfect" style="visibility: hidden">Perfect!</label>
+                <script type="text/javascript">
+                    function actualizar_resultado(){
+                        var elem_names = ["vi","vc","va","vd","pi","pc","pa","pd","ai","ac","aa","ad"];
+                        var result = 0;
+                        for(index in elem_names){
+                            if(document.getElementById(elem_names[index]).checked === true){
+                                result = result + 1;
+                            }
+                        }
+                        document.getElementById("resultado").textContent = result;
+                        if(result == 12){
+                            document.getElementById("perfect").style["visibility"] = "inherit";
+                        } else {
+                            document.getElementById("perfect").style["visibility"] = "hidden";
+                        }
+                    }
+                </script>
+            </section>
+
+            <section>
+                <h3>Infraestructura como Código</h3>
+                <img src="images/dim_terraform.svg" class="no-border fragment" width="100px">
+                <img src="images/dim_cloudformation.png" class="no-border fragment" width="100px">
+                <img src="images/dim_azure_rm.png" class="no-border fragment" width="100px">
+                <img src="images/dim_google_dm.png" class="no-border fragment" width="100px">
+                <img src="images/dim_xen.svg.png" class="no-border fragment" width="100px">
+            </section>
+
+            <section>
+                <h3>Configuración como Código</h3>
+                <img src="images/dim_ansible.png" class="no-border fragment" width="100px">
+                <img src="images/dim_chef.jpg" class="no-border fragment" width="200px">
+                <img src="images/dim_puppet.png" class="no-border fragment" width="100px">
+                <img src="images/dim_saltstack.png" class="no-border fragment" width="200px">
+            </section>
+
+            <section>
+                <h3>Datos como Código</h3>
+                <img src="images/dim_liquibase.png" class="no-border fragment" width="100px">
+                <img src="images/dim_flyway.png" class="no-border fragment" width="200px">
+            </section>
+
+            <section>
+                <h3>Aplicaciones</h3>
+                <table>
+                    <tbody>
+                        <tr class="fragment"><td>DEV</td><td>Developers</td></tr>
+                        <tr class="fragment"><td>BUILD</td><td>Build Engineer</td></tr>
+                        <tr class="fragment"><td>QA</td><td>QA Team</td></tr>
+                        <tr class="fragment"><td>SIT</td><td>Integration Testers</td></tr>
+                        <tr class="fragment"><td>UAT</td><td>User Test</td></tr>
+                        <tr class="fragment"><td>PROD</td><td>Operations</td></tr>
+                    </tbody>
+                </table>
+            </section>
+
+        </section>
+
+        <!--Conceptos-->
+        <section data-background="url('images/logo_esquina.svg')" data-background-position="right bottom" data-background-repeat="no-repeat">
+            <section>
+                <img style="float: left" class="no-border" width="10%" src="images/rombo.svg"/>
+                <h1>Conceptos</h1>
+            </section>
+
+            <section>
+                <h3>Desarrollo Ágil</h3>
+                <p>Manifiesto Ágil</p>
+                <img class="stretch" src="images/agile_manifesto.png">
+                <p>12 principios</p>
+            </section>
+
+            <section>
+                <h3>Flujo de Valor</h3>
+                <img src="images/value-stream.png"/>
+                <aside class="notes">
+                    <ul>
+                        <li>Agilidad</li>
+                        <ul>
+                            <li>Reducir dramáticamente los tiempos desde la concepción de una idea hasta su puesta en producción</li>
+                        </ul>
+                        <li>Productividad</li>
+                        <ul>
+                            <li>Reducir dramáticamente los tiempos desde la concepción de una idea hasta su puesta en producción</li>
+                        </ul>
+                        <li>Innovación</li>
+                        <ul>
+                            <li>Reducir dramáticamente los tiempos desde la concepción de una idea hasta su puesta en producción</li>
+                        </ul>
+                    </ul>
+                </aside>
+            </section>
+
+            <section>
+                <h3> CI/CD/CD</h3>
+                <img src="images/ci_cd_cd.png" width="80%"/>
+            </section>
+
+            <section>
+                <h2>Aprendizaje Continuo y Experimentación</h2>
+                Kaizen
+                <img src="images/devops_kaizen.png" class="no-border" width="10%"/>
+                <img src="images/devops_muda_mura_muri.png" class="no-border" width="50%"/>
+
+            </section>
+
+            <section>
+                <h2>Aprendizaje Continuo y Experimentación</h2>
+                Ciclo de Deming
+                <img src="images/devops_ciclo_deming.png" class="no-border" width="50%"/>
+
+                <aside class="notes">
+                    Muri: Excess
+                    Mura: Uneveness Disparidad
+                    Muda: Waste
+                    Image from: https://hackernoon.com/the-muri-of-a-bad-on-call-system-6d059f715f32
+                    Cultura de aprendizaje continuo y experimentación
+                    - Leadership
+                    Mistakes are punished (Blameless postmortems) Ejemplo gitlab y amazon
+                    Suggestions or problems are viewed as whistle blowers and troublemakers
+                    - Experiments encouraged
+                    Enabled by standardization of procedures and documentation of results
+                    - We are all lifelong learners who must take risks in our daily work.
+                    Apply scientific approach to process improvement and product development
+                    Learn from successes and failures!
+                    Local learnings are turned intro global improvements!
+                    "Even more important than daily work is the improvement of daily work"
+                    In the absence of improvements processes degrade over time.
+                    Schedule time to improve: Kaizen blitzes
+                    From: Devops Handbook
+                </aside>
+            </section>
+
+            <section>
+                <h2>Aprendizaje Continuo y Experimentación</h2>
+                Blameless postmortems:
+                <a href="https://aws.amazon.com/message/41926/">
+                    <img src="images/devops_aws_s3.png" class="no-border" width="10%"/>
+                </a>
+                <a href="https://about.gitlab.com/2017/02/10/postmortem-of-database-outage-of-january-31/">
+                    <img src="images/devops_gitlab.png" class="no-border" width="10%"/>
+                </a>
+
+                <aside class="notes">
+                    Cuando git lab se cayo por un día completo y perdieron 6 horas de datos,
+                    la culpa no fue de quien corrió el comando para borrar el cache.
+                    Fue del proceso que le permitió correr el comando estando cansado sin estar consiente que estaba en producción.
+                    Agregaron indicadores claros para tener presente que se esta en un servidor de producción
+                    Cuando S3 se cayo por que se corrió un comando de reinicio que aplico a mas máquinas del cluster de las esperadas, se corrigió el comando
+                    para que no permita reiniciar más maquinas de las que desestabilizan el cluster.
+            </section>
+
+            <section>
+                <h3>Aprendizaje Continuo y Experimentación</h3>
+                <ul>
+                    <li class="fragment">Learning Management Systems</li>
+                    <li class="fragment">¿Qué tecnologías vienen?</li>
+                    <li class="fragment">¿Qué hemos probado?</li>
+                    <li class="fragment">¿Qué deberíamos probar?</li>
+                    <li class="fragment"><a href="https://www.thoughtworks.com/radar/byor">Crea tu propio radar.</a></li>
+                </ul>
+            </section>
+
+            <section>
+                <h3>Aprendizaje Continuo y Experimentación</h3>
+                <ul>
+                    <li class="fragment"><a src="https://www.thoughtworks.com/radar/techniques">Técnicas</a></li>
+                    <li class="fragment"><a src="https://www.thoughtworks.com/radar/tools">Herramientas</a></li>
+                    <li class="fragment"><a src="https://www.thoughtworks.com/radar/languages-and-frameworks">Lenguajes y Plataformas</a></li>
+                    <li class="fragment"><a src="https://www.thoughtworks.com/radar/platforms">Plataformas</a></li>
+                </ul>
+            </section>
+
+            <section>
+                <h2>Arquitectura de Sistemas</h2>
+                <img class="stretch" src="images/releaseit.png">
+            </section>
+
+            <section>
+                <h3>Reactive Manifesto</h3>
+                <img src="images/devops_reactive.svg" width="80%"/>
+                <p class="fragment">Los sistemas grandes están compuestos de sistemas más pequeños y dependen de las propiedades reactivas de estos.</p>
+                <aside class="notes">
+                    <ul>
+                        <li>
+                            Responsiveness: is the cornerstone of usability and utility
+                            it means that problems may be detected quickly
+                            Rapid, consistent, response times, with reliable upper bounds.
+                            This simplifies error handling, builds confidence and encourages further interaction.
+                        </li>
+                        <li>
+                            Resilient: Systems stay responsive in face of failure.
+                            Replication, containment, isolation and delegation.
+                            Recovery is delegated to another (external component)
+                        </li>
+                        <li>
+                            Elastic: System responds under varying workload
+                            Increase or decrease allocated resources
+                            No bottlenecks
+                        </li>
+                        <li>
+                            Message Driven: Asynchronous message passing
+                            Delegate failures as messages.
+                            Back-pressure (components must tell when under stress)
+                            Non-blocking communication
+                        </li>
+                    </ul>
+                </aside>
+            </section>
+
+            <section>
+                <h3><a href="https://12factor.net/">12 Factor app</a></h3>
+                <table>
+                    <tbody>
+                        <tr class="fragment">
+                            <td>I. Codebase</td><td>One codebase in revision control, many deploys</td>
+                        </tr>
+                        <tr class="fragment">
+                            <td>II. Dependencies</td><td>Explicitly declare and isolate dependencies</td>
+                        </tr>
+                        <tr class="fragment">
+                            <td>III. Config</td><td>Store config in the environment</td>
+                        </tr>
+                        <tr class="fragment">
+                            <td>IV. Backing services</td><td>Treat backing services as attached resources</td>
+                        </tr>
+                    </tbody>
+                </table>
+                <aside class="notes">
+                    I: Code
+                    <ul>
+                        <li>All deploys from single code base (many code bases are many apps and each must have 12 factor)</li>
+                        <li>Deploy is running instance of app</li>
+                        <li>One to one between app and codebase</li>
+                    </ul>
+                    II: Dependencies
+                    <ul>
+                        <li>Never relies on implicit existence of system-wide packages</li>
+                        <li>Dependency declaration and isolation must always be used together (dependency declaration manifest, dependency isolation tool)</li>
+                        <li>Dont "shell out" to system tools</li>
+                    </ul>
+                    III: Config
+                    <ul>
+                        <li>Whatever varies between deploys</li>
+                        <li>Litmus Test: Can code base be made public without compromising credentials?</li>
+                        <li>Env variables: independent and not grouped</li>
+                    </ul>
+                    IV: Backing Services
+                    <ul>
+                        <li>Backing service is any service the app consumes over the network.</li>
+                        <li>Makes no distinction between local and third party service.</li>
+                        <li>Every service is a resource that can be attached or detached at will(no code changes)</li>
+                    </ul>
+                </aside>
+            </section>
+
+            <section>
+                <h3><a href="https://12factor.net/">12 Factor app</a></h3>
+                <table>
+                    <tbody>
+                        <tr class="fragment">
+                            <td>V. Build, release, run</td><td>Strictly separate build and run stages</td>
+                        </tr>
+                        <tr class="fragment">
+                            <td>VI. Processes</td><td>Execute the app as one or more stateless processes</td>
+                        </tr>
+                        <tr class="fragment">
+                            <td>VII. Port binding</td><td>Export services via port binding</td>
+                        </tr>
+                        <tr class="fragment">
+                            <td>VIII. Concurrency</td><td>Scale out via the process model</td>
+                        </tr>
+                    </tbody>
+                </table>
+                <aside class="notes">
+                    V: Build, release, run
+                    <ul>
+                        <li>Build Stage: transform code to executable(build)</li>
+                        <li>Release Stage:Take build and combine with deploy config(release)</li>
+                        <li>Run Stage:Runs app in execution environment</li>
+                        <li>Every release unique ID</li>
+                    </ul>
+                    VI: Processes
+                    <ul>
+                        <li>Each app as one or more processes</li>
+                        <li>Stateless: don't carry state between transactions</li>
+                        <li>Persistence is done through a backing service</li>
+                        <li>Stiky sessions violate 12 factor</li>
+                    </ul>
+                    VII: Port binding
+                    <ul>
+                        <li>Self-contained(no runtime injection into system web server)</li>
+                        <li>All processing occurs in user space</li>
+                        <li>One app can become backing service for another app.</li>
+                    </ul>
+                    VIII: Concurrency
+                    <ul>
+                        <li>Scaly horizontally by spawning more app processes</li>
+                        <li>App Should never daemonize (Rely on Os system process manager)</li>
+
+                    </ul>
+
+                </aside>
+            </section>
+
+            <section>
+                <h3><a href="https://12factor.net/">12 Factor app</a></h3>
+                <table>
+                    <tbody>
+                        <tr class="fragment">
+                            <td>IX. Disposability</td><td>Maximize robustness: fast startup and graceful shutdown</td>
+                        </tr>
+                        <tr class="fragment">
+                            <td>X. Dev/prod parity</td><td>Keep "environments" as similar as possible</td>
+                        </tr>
+                        <tr class="fragment">
+                            <td>XI. Logs</td><td>Treat logs as event streams</td>
+                        </tr>
+                        <tr class="fragment">
+                            <td>XII. Admin processes</td><td>Run admin/management tasks as one-off processes</td>
+                        </tr>
+                    </tbody>
+                </table>
+                <aside class="notes">
+                    IX: Disposability
+                    <ul>
+                        <li>Processes can be started or stopped at any time</li>
+                        <li>Fast startup</li>
+                        <li>Shutdown gracefully with SIGTERM</li>
+                        <li>Robust against sudden death (hardware failure)</li>
+                    </ul>
+                    X: Dev/prod parity
+                    <ul>
+                        <li>Reduce dev and prod gaps:</li>
+                        <li>Time gap: write code and deploy it hours or minutes later</li>
+                        <li>Personnel gap: Devs who wrote code are involved in deploying it and watching it in prod</li>
+                        <li>Tools gap: development and production as similar as possible(also dbs)</li>
+                    </ul>
+                    XI: Logs
+                    <ul>
+                        <li>App never concerns itself with routing or storage of output stream (STDOUT)</li>
+                        <li>Log files configured by execution environment</li>
+                        <li>Capture and analyze logs (splunk,Haddop ..) (Find events, graph trends, active alerting)</li>
+                    </ul>
+                    XII: Admin processes
+                    <ul>
+                        <li>Admin code must ship with application code to avoid sync issues</li>
+                        <li>Admin processes should be standalone</li>
+                        <li>Run admin scripts with same environment as app (REPL)</li>
+                    </ul>
+
+                </aside>
+            </section>
+
+            <section>
+                <h2>Ganado vs Mascotas</h2>
+                <img src="images/devops_pets_cattle.png" class="no-border" width="50%">
+                <p class="fragment">
+                    <img src="images/devops_fenix.png" class="no-border" width="10%" style="float: left">
+                    Servidores Fénix vs Copo de nieve
+                    <img src="images/devops_snowflake.png" class="no-border" width="10%" style="float: right">
+                </p>
+            </section>
+
+            <section>
+                <h3>Monitoreo y Reacción</h3>
+                <ul>
+                    <li class="fragment">Monitoreo de Negocio</li>
+                    <li class="fragment">Monitoreo de Aplicación</li>
+                    <li class="fragment">Monitoreo de Red</li>
+                    <li class="fragment">Monitoreo de Aplicaciones Externas</li>
+                    <li class="fragment">Monitoreo de Infraestructura</li>
+                </ul>
+            </section>
+
+            <section>
+                <h3>Monitoreo y Reacción</h3>
+                <ul>
+                    <li class="fragment">Definición de Umbrales</li>
+                    <li class="fragment">Ejecución de Lógica</li>
+                    <li class="fragment">Avisos</li>
+                    <li class="fragment">Rollbacks</li>
+                </ul>
+            </section>
+
+            <section>
+                <h3>Retroalimentación</h3>
+                <ul>
+                    <li class="fragment">Bug Tracker</li>
+                    <li class="fragment">Project Management Tools</li>
+                    <li class="fragment">Team Productivity</li>
+                </ul>
+            </section>
+
+            <section>
+                <h3>Seguridad Informática</h3>
+                <ul>
+                    <li class="fragment">OpenSSL</li>
+                    <li class="fragment">PGP</li>
+                    <li class="fragment">TLS/SSL</li>
+                    <li class="fragment">Open Web Application Security Project </li>
+                    <li class="fragment">Blockchains</li>
+                </ul>
+            </section>
+
+            <section>
+                <h3>Less world</h3>
+                <ul>
+                    <li class="fragment">Serverless</li>
+                    <li class="fragment">Infrastructureless</li>
+                    <li class="fragment">Opsless</li>
+                    <li class="fragment">Securityless</li>
+                </ul>
+            </section>
+
+        </section>
+
+    </div>
+</div>
+<script src="lib/js/head.min.js"></script>
+<script src="js/reveal.js"></script>
+<script>
+                // More info about config & dependencies:
+                // - https://github.com/hakimel/reveal.js#configuration
+                // - https://github.com/hakimel/reveal.js#dependencies
+                Reveal.initialize({
+                    defaultTiming: 120,
+                    zoomKey: 'shift',
+                    math: {
+                        mathjax: 'https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.0/MathJax.js',
+                        config: 'TeX-AMS_HTML-full'  // See http://docs.mathjax.org/en/latest/config-files.html
+                    },
+                    dependencies: [
+                        { src: 'plugin/markdown/marked.js' },
+                        { src: 'plugin/markdown/markdown.js' },
+                        { src: 'plugin/zoom-js/zoom.js', async: true },
+                        { src: 'plugin/math/math.js', async: true },
+                        { src: 'plugin/highlight/highlight.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } },
+                        { src: 'plugin/notes/notes.js', async: true }
+                    ]
+                });
+
+</script>
+</body>
+</html>

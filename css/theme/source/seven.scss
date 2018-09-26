@@ -1,0 +1,101 @@
+/**
+ * S4N theme for reveal.js.
+ *
+ */
+
+
+// Default mixins and settings -----------------
+@import "../template/mixins";
+@import "../template/settings";
+// ---------------------------------------------
+
+
+// Override theme settings (see ../template/settings.scss)
+
+@import url('https://fonts.googleapis.com/css?family=Raleway');
+
+$mainColor: #000;
+$headingColor: #000;
+
+$mainFontSize: 42px;
+$mainFont: 'Raleway';
+$headingFont: 'Raleway';
+$headingTextShadow: none;
+$headingLetterSpacing: normal;
+$headingTextTransform: uppercase;
+$headingFontWeight: 600;
+$linkColor: #2a76dd;
+$linkColorHover: lighten( $linkColor, 15% );
+$selectionBackgroundColor: lighten( $linkColor, 25% );
+
+$heading1Size: 2.5em;
+$heading2Size: 1.6em;
+$heading3Size: 1.3em;
+$heading4Size: 1.0em;
+
+@mixin bodyBackground() {
+    background: #fff;
+}
+
+html:before, html:after, body:before, body:after {
+    content: "";
+    position: fixed;
+    background: #a5ebff;
+}
+
+#top, #bottom {
+    background: linear-gradient(to right, #443548, #b71930, #e94635);
+    position: fixed;
+}
+
+#left {
+    background: #443548;
+    position: fixed;
+}
+
+#right {
+    background: #e94635;
+    position: fixed;
+}
+
+#left, #right {
+    top: 0; bottom: 0;
+    width: 15px;
+}
+#left { left: 0; }
+#right { right: 0; }
+#top, #bottom {
+    left: 0; right: 0;
+    height: 15px;
+}
+#top { top: 0; }
+#bottom { bottom: 0; }
+
+.reveal h1.white-font,
+.reveal h2.white-font,
+.reveal h3.white-font,
+.reveal h4.white-font,
+.reveal h5.white-font,
+.reveal h6.white-font,
+{
+    color: #fff;
+}
+
+.reveal section img.no-border {
+    border: 0px;
+    background: initial;
+    box-shadow: none;
+}
+
+.reveal svg.container {
+    float: left;
+}
+
+textarea {
+    font-size: 50px;
+    border: 1px;
+}
+
+// Theme template ------------------------------
+@import "../template/theme";
+// ---------------------------------------------

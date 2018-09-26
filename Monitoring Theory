@@ -1,0 +1,147 @@
+* Funcional
+    * Negocio
+
+* No Funcional
+    * Ambiente Interno
+        * App
+            * Throughput
+            * MTTR (Mean Time To respond)
+            * Errors (Logs)
+        * OS
+            * Resource Usage
+            * Errors
+    * Ambiente Externo
+        * Red
+        * Servicios usados
+        * Caja Negra
+            * Usuarios
+                * Origen
+                * Cantidad
+                * "Tipo"
+                    * Medio entrada(Navegador, Os, Referer ...)
+            * App (As user would see it)
+                * Latencia
+                * Disponibilidad
+                * Appdex
+                ...
+
+
+
+
+Logs:
+    ELK
+    Cloudwatch metrics
+    mtail (extract monitoring into time series)
+Metrics:
+    Instrumentation 
+        In code: (Java instrumentation, https://github.com/Netflix/spectator, servo netflix)
+        Binary: machine, jmx(java agent)
+    Scrapping (Prometheus, Riemman?)
+    Grouping
+
+
+Golden Signals (USE):
+
+* Latency
+* Traffic
+* Errors
+* Saturation
+
+Worry about Tail (Dont use averages, histogram with exponential buckets)
+
+Resolution of measurements:
+* should go with SLO
+* If too frequent use sampling and agregates
+
+
+Monitoring system should be simple
+* Rules should be simple
+* 
+
+
+Problem Resolution Strategies(http://www.brendangregg.com/methodology.html):
+    Anti-Methodologies:
+        * Blame someone else:
+            1. Find a system or environment component you are not responsible for
+            2. Hypothesize that the issue is with that component
+            3. Redirect the issue to the responsible team
+            4. When proven wrong, go to 1
+        * Street Light:
+            1. Pick observability tools that are:
+                familiar
+                found on the Internet
+                found at random
+            2. Run tools
+            3. Look for obvious issues
+        * Drunk Man:
+            1 Change things at random until the problem goes away
+        * Random Change:
+            1 Measure a performance baseline
+            2 Pick a random attribute to change (eg, a tunable)
+            3 Change it in one direction
+            4 Measure performance
+            5 Change it in the other direction
+            6 Measure performance
+            7 Were the step 4 or 6 results better than the baseline? If so, keep the change; of not, revert
+            8 Goto step 1
+        * Passive Benchmarking Anti-Method:
+            1 Pick a benchmark tool
+            2 Run it with a variety of options
+            3 Make a slide deck of the results
+            4 Hand the slides to management
+        * Traffic Light
+            1 Open dashboard
+            2 All green? Assume everything is good.
+            3 Something red? Assume that's a problem.
+    Methodologies:
+
+        * USE (Usage Saturation Error)
+            * List Resources
+            * For every resource, check utilization, saturation, and errors.
+        * RED ()
+        * TSA
+            For each thread measure time in each state, investigate from most to least frequent
+        * Ad hoc checklist
+        * Problem statement
+            What makes you think there is a performance problem?
+            Has this system ever performed well?
+            What has changed recently? (Software? Hardware? Load?)
+            Can the performance degradation be expressed in terms of latency or run time?
+            Does the problem affect other people or applications (or is it just you)?
+            What is the environment? What software and hardware is used? Versions? Configuration?
+        * RTFM
+        * Scientific Method
+        * OODA 
+            Observe
+            Orient
+            Decide
+            Act
+        * Work Load characterization
+        * Drill-Down
+        * Elimination (Binary search)
+        * Tools Method 
+            List Tools(or add more)
+            For each tool list useful metrics
+            For each metric list interpretation
+            Run selected tools and interpret
+        * CPU profile with flame graph
+        * Performance Evaluation Steps
+            State the goals of the study and define system boundaries
+            List system services and possible outcomes
+            Select performance metrics
+            List system and workload parameters
+            Select factors and their values
+            Select the workload
+            Design the experiments
+            Analyze and interpret the data
+            Present the results
+            If necessary, start over
+        * Capacity Planning Process
+            Instrument the system
+            Monitor system usage
+            Characterize workload
+            Predict performance under different alternatives
+            Select the lowest cost, highest performance alternative
+
+
+
