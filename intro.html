@@ -1,5 +1,6 @@
 <!doctype html>
 <html>
+
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
@@ -11,70 +12,91 @@
     <link rel="stylesheet" href="custom/css/cssimages.css">
     <!-- Printing and PDF exports -->
     <script>
-			var link = document.createElement( 'link' );
-			link.rel = 'stylesheet';
-			link.type = 'text/css';
-			link.href = window.location.search.match( /print-pdf/gi ) ? 'css/print/pdf.css' : 'css/print/paper.css';
-			document.getElementsByTagName( 'head' )[0].appendChild( link );
-
-    </script>
+        var link = document.createElement( 'link' );
+        link.rel = 'stylesheet';
+        link.type = 'text/css';
+        link.href = window.location.search.match( /print-pdf/gi ) ? 'css/print/pdf.css' : 'css/print/paper.css';
+        document.getElementsByTagName( 'head' )[0].appendChild( link );
+        </script>
 </head>
+
 <body>
-<div id="left"></div>
-<div id="right"></div>
-<div id="top"></div>
-<div id="bottom"></div>
-<div class="reveal">
-    <div class="slides">
-        <section data-background="url('custom/images/logo_esquina_intro_end.svg'), linear-gradient(to right, #443548, #b71930, #e94635)"
-                 data-background-position="right bottom" data-background-repeat="no-repeat">
-            <img class="no-border" width="5%" src="custom/images/rombo.svg"/>
-            <img class="no-border" width="13%" src="custom/images/s4n.svg"/>
-            <h1 class="white-font">ML</h1>
-            <h2 class="white-font">Intro</h2>
-        </section>
-
-        <!--Contenido-->
-        <section data-background="url('custom/images/logo_esquina.svg')" data-background-position="right bottom" data-background-repeat="no-repeat">
-
-            <section>
-                <img style="float: left" class="no-border" width="10%" src="custom/images/rombo.svg"/>
-                <h1>¿Qué sabes de ML?</h1>
+    <div id="left"></div>
+    <div id="right"></div>
+    <div id="top"></div>
+    <div id="bottom"></div>
+    <div class="reveal">
+        <div class="slides">
+            <section data-background="url('custom/images/logo_esquina_intro_end.svg'), linear-gradient(to right, #443548, #b71930, #e94635)" data-background-position="right bottom" data-background-repeat="no-repeat">
+                <img class="no-border" width="5%" src="custom/images/rombo.svg"/>
+                <img class="no-border" width="13%" src="custom/images/s4n.svg"/>
+                <h1 class="white-font">ML</h1>
+                <h2 class="white-font">Intro</h2>
             </section>
-
-            <section>
-                <img style="float: left" class="no-border" width="10%" src="custom/images/rombo.svg"/>
-                <h2>¿Qué esperas del curso de ML?</h2>
-                <h2>¿Qué quieres aprender?</h2>
-                <h2>¿Qué te haria sentir que se cumplió con la meta del curso?</h2>
+            <!--Contenido-->
+            <section data-background="url('custom/images/logo_esquina.svg')" data-background-position="right bottom" data-background-repeat="no-repeat">
+                <section>
+                    <img style="float: left" class="no-border" width="10%" src="custom/images/rombo.svg"/>
+                    <h1>¿Qué sabes de ML?</h1>
+                </section>
+                <section>
+                    <img style="float: left" class="no-border" width="10%" src="custom/images/rombo.svg"/>
+                    <h2>¿Qué esperas del curso de ML?</h2>
+                    <h2>¿Qué quieres aprender?</h2>
+                    <h2>¿Qué te haría sentir que se cumplió con la meta del curso?</h2>
+                </section>
             </section>
-
-            <section>                
-                <p><a />Presentación</p>
+            <section data-background="url('custom/images/logo_esquina.svg')" data-background-position="right bottom" data-background-repeat="no-repeat">
+                <section>
+                    <h1>¿Qué es Machine Learning?</h1>
+                    <h3>Aprendizaje de Máquina</h3>
+                </section>
+                <section>
+                    <video controls>
+                        <source src="sessions/Intro/index.mp4" type="video/mp4">
+                        <track src="sessions/Intro/subtitles.vtt" label="English" kind="captions" srclang="en" default="">
+                    </video>
+                    <p><a href="https://www.coursera.org/learn/machine-learning/lecture/zcAuT/welcome-to-machine-learning">Coursera ML Course</a></p>
+                </section>
+                <section>
+                    <img style="float: left" class="no-border" width="10%" src="custom/images/rombo.svg"/>
+                    <h2>¿Cómo se conecta todo?</h2>
+                </section>
+                <section>
+                    <iframe height="600px" width="90%" src="https://drive.mindmup.com/map/1Zmm86kbaoNuscVW-6gia-rDNjC8k1JL3"></iframe>
+                </section>
             </section>
-
-        </section>
-
+            <section data-background="url('custom/images/logo_esquina.svg')" data-background-position="right bottom" data-background-repeat="no-repeat">
+                <section>
+                    <img style="float: left" class="no-border" width="10%" src="custom/images/rombo.svg"/>
+                    <h1>Presentación General</h1>
+                </section>
+                <section>
+                    Contenidos
+                    Parte Practica
+                    Ejercicio final
+                </section>
+            </section>
+        </div>
     </div>
-</div>
-<script src="lib/js/head.min.js"></script>
-<script src="js/reveal.js"></script>
-<script>
-				// More info about config & dependencies:
-				// - https://github.com/hakimel/reveal.js#configuration
-				// - https://github.com/hakimel/reveal.js#dependencies
-				Reveal.initialize({
-					defaultTiming: 120,
-					zoomKey: 'shift',
-					dependencies: [
-						{ src: 'plugin/markdown/marked.js' },
-						{ src: 'plugin/markdown/markdown.js' },
-						{ src: 'plugin/zoom-js/zoom.js', async: true },
-						{ src: 'plugin/highlight/highlight.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } },
-						{ src: 'plugin/notes/notes.js', async: true }
-					]
-				});
-
-</script>
+    <script src="lib/js/head.min.js"></script>
+    <script src="js/reveal.js"></script>
+    <script>
+    // More info about config & dependencies:
+    // - https://github.com/hakimel/reveal.js#configuration
+    // - https://github.com/hakimel/reveal.js#dependencies
+    Reveal.initialize({
+        defaultTiming: 120,
+        zoomKey: 'shift',
+        dependencies: [
+            { src: 'plugin/markdown/marked.js' },
+            { src: 'plugin/markdown/markdown.js' },
+            { src: 'plugin/zoom-js/zoom.js', async: true },
+            { src: 'plugin/highlight/highlight.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } },
+            { src: 'plugin/notes/notes.js', async: true }
+        ]
+    });
+    </script>
 </body>
+
 </html>
