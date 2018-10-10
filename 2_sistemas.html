@@ -1,0 +1,137 @@
+<!doctype html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>S4N</title>
+    <link rel="stylesheet" href="css/reveal.css">
+    <link rel="stylesheet" href="css/theme/seven.css">
+    <!-- Theme used for syntax highlighting of code -->
+    <link rel="stylesheet" href="lib/css/zenburn.css">
+    <link rel="stylesheet" href="custom/css/cssimages.css">
+    <!-- Printing and PDF exports -->
+    <script>
+        var link = document.createElement( 'link' );
+        link.rel = 'stylesheet';
+        link.type = 'text/css';
+        link.href = window.location.search.match( /print-pdf/gi ) ? 'css/print/pdf.css' : 'css/print/paper.css';
+        document.getElementsByTagName( 'head' )[0].appendChild( link );
+        </script>
+</head>
+
+<body>
+    <div id="left"></div>
+    <div id="right"></div>
+    <div id="top"></div>
+    <div id="bottom"></div>
+    <div class="reveal">
+        <div class="slides">
+            <section data-background="url('custom/images/logo_esquina_intro_end.svg'), linear-gradient(to right, #443548, #b71930, #e94635)" data-background-position="right bottom" data-background-repeat="no-repeat">
+                <img class="no-border" width="5%" src="custom/images/rombo.svg"/>
+                <img class="no-border" width="13%" src="custom/images/s4n.svg"/>
+                <h1 class="white-font">ML</h1>
+                <h2 class="white-font">Sistemas</h2>
+            </section>
+            <!--Contenido-->
+            <section data-background="url('custom/images/logo_esquina.svg')" data-background-position="right bottom" data-background-repeat="no-repeat">
+                <section>
+                    <img style="float: left" class="no-border" width="10%" src="custom/images/rombo.svg"/>
+                    <h1>Por nivel de supervisión</h1>
+                </section>
+                <section>
+                    <img class="no-border" width="100%" src="sessions/TiposSistemas/TiposSupervision.jpg">
+                    <p>Con Respuestas - Sin Respuestas - Castigo </p>
+                </section>
+                <section>
+                    <h2>Aprendizaje Supervisado</h2>
+                    <img class="no-border" width="100%" src="sessions/TiposSistemas/aprenderEscribir.jpg">
+                </section>
+                <section>
+                    <h2>Aprendizaje Supervisado</h2>
+                    <img class="no-border" width="100%" src="sessions/TiposSistemas/aprenderEscribir2.png">
+                </section>
+                <section>
+                    <h2>Aprendizaje Supervisado</h2>
+                    <img class="no-border" width="100%" src="sessions/TiposSistemas/ejemploAnimales.png">
+                </section>
+
+                <section>
+                    <h2>Aprendizaje Supervisado</h2>
+                    <img class="no-border" width="100%" src="sessions/TiposSistemas/ejemploSpam.png">
+                </section>
+                <section>
+                    <h2>Aprendizaje Supervisado</h2>
+                    <p>Otros Ejemplos?</p>
+                </section>
+                <section>
+                    
+                    Ejemplos: Entradas y Salidas
+                    Entradas: Características, Variables Independientes, X
+                    Salidas: Etiquetas, Variable Dependiente, Y
+                    Modelo f(X) = y
+                    Error y - y'
+                </section>
+                <section>
+                    Clasificación Vs Regresión
+                </section>
+
+
+
+                <section>                   
+                        
+                    Aprendizaje por Refuerzo
+                        Q-Learning Sarsa
+                    Aprendizaje No Supervisado
+                        Unlabeled
+                        Clustering
+                        Visualization
+                        Dimensionality Reduction
+                        Association rule learning
+                    Aprendizaje semiSupervisado (Supervisado + No supervisado)
+                        Pocos ejemplos con label y luego le pone el label solo al resto (por similaridades encontradas no supervisado)
+                </section>
+                <section>
+                    <h2>Aprendizaje Supervisado</h2>
+                    "Ejemplos marcados"(labeled)
+                    "Ejemplos con respuestas"
+
+                </section>
+            </section>
+            <section data-background="url('custom/images/logo_esquina.svg')" data-background-position="right bottom" data-background-repeat="no-repeat">
+                <section>
+                    <img style="float: left" class="no-border" width="10%" src="custom/images/rombo.svg"/>
+                    <h1>Por frecuencia aprendizaje</h1>
+                </section>                
+            </section>
+            <section data-background="url('custom/images/logo_esquina.svg')" data-background-position="right bottom" data-background-repeat="no-repeat">
+                <section>
+                    <img style="float: left" class="no-border" width="10%" src="custom/images/rombo.svg"/>
+                    <h1>Por forma de generalización</h1>
+                </section>                
+            </section>
+        </div>
+    </div>
+    <script src="lib/js/head.min.js"></script>
+    <script src="js/reveal.js"></script>
+    <script>
+    // More info about config & dependencies:
+    // - https://github.com/hakimel/reveal.js#configuration
+    // - https://github.com/hakimel/reveal.js#dependencies
+    Reveal.initialize({
+        defaultTiming: 120,
+        zoomKey: 'shift',
+        history: true,
+        progress: true,
+        dependencies: [
+            { src: 'plugin/markdown/marked.js' },
+            { src: 'plugin/markdown/markdown.js' },
+            { src: 'plugin/zoom-js/zoom.js', async: true },
+            { src: 'plugin/highlight/highlight.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } },
+            { src: 'plugin/notes/notes.js', async: true }
+        ]
+    });
+    </script>
+</body>
+
+</html>
