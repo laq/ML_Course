@@ -1,270 +1,259 @@
 <!doctype html>
 <html>
-
-<head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
-    <title>S4N</title>
-    <link rel="stylesheet" href="css/reveal.css">
-    <link rel="stylesheet" href="css/theme/seven.css">
-    <!-- Theme used for syntax highlighting of code -->
-    <link rel="stylesheet" href="lib/css/zenburn.css">
-    <link rel="stylesheet" href="custom/css/cssimages.css">
-    <!-- Printing and PDF exports -->
-    <script>
-        var link = document.createElement( 'link' );
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+        <title>S4N</title>
+        <link rel="stylesheet" href="css/reveal.css">
+        <link rel="stylesheet" href="css/theme/seven.css">
+        <!-- Theme used for syntax highlighting of code -->
+        <link rel="stylesheet" href="lib/css/zenburn.css">
+        <link rel="stylesheet" href="custom/css/cssimages.css">
+        <!-- Printing and PDF exports -->
+        <script>
+        var link = document.createElement('link');
         link.rel = 'stylesheet';
         link.type = 'text/css';
-        link.href = window.location.search.match( /print-pdf/gi ) ? 'css/print/pdf.css' : 'css/print/paper.css';
-        document.getElementsByTagName( 'head' )[0].appendChild( link );
+        link.href = window.location.search.match(/print-pdf/gi) ? 'css/print/pdf.css' : 'css/print/paper.css';
+        document.getElementsByTagName('head')[0].appendChild(link);
         </script>
-</head>
-
-<body>
-    <div id="left"></div>
-    <div id="right"></div>
-    <div id="top"></div>
-    <div id="bottom"></div>
-    <div class="reveal">
-        <div class="slides">
-            <section data-background="url('custom/images/logo_esquina_intro_end.svg'), linear-gradient(to right, #443548, #b71930, #e94635)" data-background-position="right bottom" data-background-repeat="no-repeat">
-                <img class="no-border" width="5%" src="custom/images/rombo.svg"/>
-                <img class="no-border" width="13%" src="custom/images/s4n.svg"/>
-                <h1 class="white-font">ML</h1>
-                <h2 class="white-font">Tipos de Sistemas</h2>
-            </section>
-            <!--Contenido-->
-            <section data-background="url('custom/images/logo_esquina.svg')" data-background-position="right bottom" data-background-repeat="no-repeat">
-                <section>
-                    <img style="float: left" class="no-border" width="10%" src="custom/images/rombo.svg"/>
-                    <h1>Por nivel de supervisión</h1>
+    </head>
+    <body>
+        <div id="left"></div>
+        <div id="right"></div>
+        <div id="top"></div>
+        <div id="bottom"></div>
+        <div class="reveal">
+            <div class="slides">
+                <section data-background="url('custom/images/logo_esquina_intro_end.svg'), linear-gradient(to right, #443548, #b71930, #e94635)" data-background-position="right bottom" data-background-repeat="no-repeat">
+                    <img class="no-border" width="5%" src="custom/images/rombo.svg"/>
+                    <img class="no-border" width="13%" src="custom/images/s4n.svg"/>
+                    <h1 class="white-font">ML</h1>
+                    <h2 class="white-font">Tipos de Sistemas</h2>
                 </section>
-                <section>
-                    <img class="no-border" width="100%" src="sessions/TiposSistemas/TiposSupervision.jpg">
-                    <p>Con Respuestas - Sin Respuestas - Castigo </p>
-                    <p><i>Labels - No Labels - Reward</i></p>
-                </section>
-                <section>
-                    <h2>Supervisado</h2>
-                    <p>Respuestas</p>
-                    <img class="no-border" src="sessions/TiposSistemas/cheating.jpg">
-                </section>
-                <section>
-                    <h2>Refuerzo</h2>
-                    <p>"Tabla", "Frio o Caliente"</p>
-                    <img class="no-border" src="sessions/TiposSistemas/hayTabla.jpg">
-                    <p>Refuerzo positivo y refuerzo negativo</p>
-                </section>
-                <section>
-                    <h2>No Supervisado</h2>
-                    <p>Sin Respuestas</p>
-                    <img class="no-border" width="60%" src="sessions/TiposSistemas/childShapes.jpg">
-                </section>
-                <section>
-                    <h2>No Supervisado</h2>
-                    <p>Sin Respuestas</p>
-                    <img class="no-border"  src="sessions/TiposSistemas/catKnocking.jpg">
-                    <p>El gato aprende solo a tumbar cosas</p>
-                </section>
-                <section>
-                    <table>
-                        <tr>
-                            <td>Supervisado</td>
-                            <td>Respuestas</td>
-                            <td><img class="no-border" height="150px" src="sessions/TiposSistemas/cheating.jpg"></td>
-                        </tr>
-                        <tr>
-                            <td>Refuerzo</td>
-                            <td>"Tabla" , "Frio o Caliente"</td>
-                            <td><img class="no-border" height="100px" src="sessions/TiposSistemas/hayTabla.jpg"></td>
-                        </tr>
-                        <tr>
-                            <td>No Supervisado</td>
-                            <td>Sin Respuestas</td>
-                            <td><img class="no-border" height="150px" src="sessions/TiposSistemas/childShapes.jpg"></td>
-                        </tr>
-                    </table>
-                </section>
-                <section>
-                    <h2>Aprendizaje Supervisado</h2>
-                    <img class="no-border" width="100%" src="sessions/TiposSistemas/aprenderEscribir.jpg">
-                </section>
-                <section>
-                    <h2>Aprendizaje Supervisado</h2>
-                    <img class="no-border" width="100%" src="sessions/TiposSistemas/aprenderEscribir2.png">
-                </section>
-                <section>
-                    <h2>Aprendizaje Supervisado</h2>
-                    <img class="no-border" width="100%" src="sessions/TiposSistemas/ejemploManzana.png">
-                </section>
-                <section>
-                    <h2>Aprendizaje Supervisado</h2>
-                    <img class="no-border" width="100%" src="sessions/TiposSistemas/ejemploAnimales.png">
-                </section>
-                <section>
-                    <h2>Aprendizaje Supervisado</h2>                    
-                    <img class="no-border" width="80%" src="sessions/TiposSistemas/elprecioescorrecto.jpg">
-                </section>
-                <section>
-                    <h2>Aprendizaje Supervisado</h2>
-                    <img class="no-border" width="80%" src="sessions/TiposSistemas/ejemploSpam.png">
-                    <p>Generaliza (<b>Nuevos</b> Correos)</p>
-                </section>
-                <section>
-                    <h2>Aprendizaje Supervisado</h2>
-                    Clasificación Vs Regresión
-                    <img class="no-border" width="80%" src="sessions/TiposSistemas/ClasificacionsVsRegresion.png">
-                </section>
-                <section>
-                    <h2>Aprendizaje Supervisado</h2>
-                    <h3>Clasificación</h3>
+                <!--Contenido-->
+                <section data-background="url('custom/images/logo_esquina.svg')" data-background-position="right bottom" data-background-repeat="no-repeat">
+                    <section>
+                        <img style="float: left" class="no-border" width="10%" src="custom/images/rombo.svg"/>
+                        <h1>Por nivel de supervisión</h1>
+                    </section>
+                    <section>
+                        <img class="no-border" width="100%" src="sessions/TiposSistemas/TiposSupervision.jpg">
+                        <p>Con Respuestas - Sin Respuestas - Castigo </p>
+                        <p><i>Labels - No Labels - Reward</i></p>
+                    </section>
+                    <section>
+                        <h2>Supervisado</h2>
+                        <p>Respuestas</p>
+                        <img class="no-border" src="sessions/TiposSistemas/cheating.jpg">
+                    </section>
+                    <section>
+                        <h2>Refuerzo</h2>
+                        <p>"Tabla", "Frio o Caliente"</p>
+                        <img class="no-border" src="sessions/TiposSistemas/hayTabla.jpg">
+                        <p>Refuerzo positivo y refuerzo negativo</p>
+                    </section>
+                    <section>
+                        <h2>No Supervisado</h2>
+                        <p>Sin Respuestas</p>
+                        <img class="no-border" width="60%" src="sessions/TiposSistemas/childShapes.jpg">
+                    </section>
+                    <section>
+                        <h2>No Supervisado</h2>
+                        <p>Sin Respuestas</p>
+                        <img class="no-border"  src="sessions/TiposSistemas/catKnocking.jpg">
+                        <p>El gato aprende solo a tumbar cosas</p>
+                    </section>
+                    <section>
+                        <table>
+                            <tr>
+                                <td>Supervisado</td>
+                                <td>Respuestas</td>
+                                <td><img class="no-border" height="150px" src="sessions/TiposSistemas/cheating.jpg"></td>
+                            </tr>
+                            <tr>
+                                <td>Refuerzo</td>
+                                <td>"Tabla" , "Frio o Caliente"</td>
+                                <td><img class="no-border" height="100px" src="sessions/TiposSistemas/hayTabla.jpg"></td>
+                            </tr>
+                            <tr>
+                                <td>No Supervisado</td>
+                                <td>Sin Respuestas</td>
+                                <td><img class="no-border" height="150px" src="sessions/TiposSistemas/childShapes.jpg"></td>
+                            </tr>
+                        </table>
+                    </section>
+                    <section>
+                        <h2>Aprendizaje Supervisado</h2>
+                        <img class="no-border" width="100%" src="sessions/TiposSistemas/aprenderEscribir.jpg">
+                    </section>
+                    <section>
+                        <h2>Aprendizaje Supervisado</h2>
+                        <img class="no-border" width="100%" src="sessions/TiposSistemas/aprenderEscribir2.png">
+                    </section>
+                    <section>
+                        <h2>Aprendizaje Supervisado</h2>
+                        <img class="no-border" width="100%" src="sessions/TiposSistemas/ejemploManzana.png">
+                    </section>
+                    <section>
+                        <h2>Aprendizaje Supervisado</h2>
+                        <img class="no-border" width="100%" src="sessions/TiposSistemas/ejemploAnimales.png">
+                    </section>
+                    <section>
+                        <h2>Aprendizaje Supervisado</h2>
+                        <img class="no-border" width="80%" src="sessions/TiposSistemas/elprecioescorrecto.jpg">
+                    </section>
+                    <section>
+                        <h2>Aprendizaje Supervisado</h2>
+                        <img class="no-border" width="80%" src="sessions/TiposSistemas/ejemploSpam.png">
+                        <p>Generaliza (<b>Nuevos</b> Correos)</p>
+                    </section>
+                    <section>
+                        <h2>Aprendizaje Supervisado</h2>
+                        Clasificación Vs Regresión
+                        <img class="no-border" width="80%" src="sessions/TiposSistemas/ClasificacionsVsRegresion.png">
+                    </section>
+                    <section>
+                        <h2>Aprendizaje Supervisado</h2>
+                        <h3>Clasificación</h3>
                         <p>Valores discretos - Categorías (1,0)</p>
-                    <h3>Regresión</h3>
+                        <h3>Regresión</h3>
                         <p>Valores continuos - Número</p>
-                </section>
-                <section>
-                    <h2>Aprendizaje Supervisado</h2>
-                    <p>¿Otros Ejemplos?</p>
-                </section>
-                <section>
-                    <img class="no-border" width="80%" src="sessions/TiposSistemas/housingPricePrediction.png">
-                </section>
-                <section>
-                    <h2>Aprendizaje Supervisado</h2>
-                    <table>
-                        <tr>
-                            <td>Ejemplos</td>
-                            <td>Con respuestas: Entradas y Salidas</td>
-                        </tr>
-                        <tr>
-                            <td>Entradas</td>
-                            <td>Características, Variables Independientes, $X$</td>
-                        </tr>
-                        <tr>
-                            <td>Salidas</td>
-                            <td><b>Etiquetas</b> o Valores, Variable Dependiente, $Y$</td>
-                        </tr>                        
-                        <tr>
-                            <td>Modelo</td>
-                            <td>$f(X) = Y'$</td>
-                        </tr>
-                        <tr>
-                            <td>Error</td>
-                            <td>Error $\propto |Y - Y'|$, Distancia</td>
-                        </tr>
-                    </table>                  
-                </section>
-                <section>
-                    <h3>Ejemplo características para predicción del tipo de carro</h3>
-                    <img class="no-border" width="80%" src="sessions/TiposSistemas/caracteristicasCarro.png">
-                </section>
-                <section>
-                    <h2>¿Cuales son las Características y Etiquetas de los ejemplos anteriores?</h2>
-                    <aside class="notes">
-                        Regresion:
-
-                        Clasificacion:
-                        Email spam clasification
-                        Bank customers loan pay bank willingness prediction.
-                        Cancer tumour cells identification.
-                        Sentiment analysis.
-                        Drugs classification
-                        Facial key points detection
-                        Pedestrians detection in an automotive car driving.
-                    </aside>
-
-                </section>
-
-                <section>
-                    <h2>Aprendizaje No Supervisado</h2>
-                    <img class="no-border" width="80%" src="sessions/TiposSistemas/ejemploNoSupervisado.jpeg">      
-                </section>
-                <section>
-                    <h2>Aprendizaje No Supervisado</h2>                        
+                    </section>
+                    <section>
+                        <h2>Aprendizaje Supervisado</h2>
+                        <p>¿Otros Ejemplos?</p>
+                    </section>
+                    <section>
+                        <img class="no-border" width="80%" src="sessions/TiposSistemas/housingPricePrediction.png">
+                    </section>
+                    <section>
+                        <h2>Aprendizaje Supervisado</h2>
+                        <table>
+                            <tr>
+                                <td>Ejemplos</td>
+                                <td>Con respuestas: Entradas y Salidas</td>
+                            </tr>
+                            <tr>
+                                <td>Entradas</td>
+                                <td>Características, Variables Independientes, $X$</td>
+                            </tr>
+                            <tr>
+                                <td>Salidas</td>
+                                <td><b>Etiquetas</b> o Valores, Variable Dependiente, $Y$</td>
+                            </tr>
+                            <tr>
+                                <td>Modelo</td>
+                                <td>$f(X) = Y'$</td>
+                            </tr>
+                            <tr>
+                                <td>Error</td>
+                                <td>Error $\propto |Y - Y'|$, Distancia</td>
+                            </tr>
+                        </table>
+                    </section>
+                    <section>
+                        <h3>Ejemplo características para predicción del tipo de carro</h3>
+                        <img class="no-border" width="80%" src="sessions/TiposSistemas/caracteristicasCarro.png">
+                    </section>
+                    <section>
+                        <h2>¿Cuales son las Características y Etiquetas de los ejemplos anteriores?</h2>
+                        <aside class="notes">
+                            Regresion:
+                            Clasificacion:
+                            Email spam clasification
+                            Bank customers loan pay bank willingness prediction.
+                            Cancer tumour cells identification.
+                            Sentiment analysis.
+                            Drugs classification
+                            Facial key points detection
+                            Pedestrians detection in an automotive car driving.
+                        </aside>
+                    </section>
+                    <section>
+                        <h2>Aprendizaje No Supervisado</h2>
+                        <img class="no-border" width="80%" src="sessions/TiposSistemas/ejemploNoSupervisado.jpeg">
+                    </section>
+                    <section>
+                        <h2>Aprendizaje No Supervisado</h2>
                         <p>Agrupamiento - <i>Clustering</i></p>
                         <p>Visualizacion - <i>Visualization</i></p>
                         <p>Reducion de Dimensionalidad - <i>Dimensionality Reduction</i></p>
                         <p>Reglas de asociación - <i>Association rule learning</i></p>
+                    </section>
+                    <section>
+                        <h2>Aprendizaje No Supervisado</h2>
+                        <table>
+                            <tr>
+                                <td>Ejemplos</td>
+                                <td>Entradas, <b>sin etiquetas</b></td>
+                            </tr>
+                            <tr>
+                                <td>Entradas</td>
+                                <td>Características, $X$</td>
+                            </tr>
+                            <tr>
+                                <td>Modelo</td>
+                                <td></td>
+                            </tr>
+                            <tr>
+                                <td>Error</td>
+                                <td>Error Clustering: $\propto |X1 - X2|$, Distancia (intra-inter) grupos</td>
+                            </tr>
+                        </table>
+                    </section>
+                    <section>
+                        <h2>Aprendizaje semi-Supervisado</h2>
+                        Pocos ejemplos con label y luego le pone el label solo al resto (por similaridades encontradas no supervisado)
+                    </section>
+                    <section>
+                        <h2>Aprendizaje por Refuerzo</h2>
+                        <img class="no-border" width="80%" src="sessions/TiposSistemas/caracteristicasCarro.png">
+                    </section>
+                    <section>
+                        <h2>Aprendizaje Supervisado</h2>
+                        "Ejemplos marcados"(labeled)
+                        "Ejemplos con respuestas"
+                    </section>
                 </section>
-                <section>
-                    <h2>Aprendizaje No Supervisado</h2>
-                    <table>
-                        <tr>
-                            <td>Ejemplos</td>
-                            <td>Entradas, <b>sin etiquetas</b></td>
-                        </tr>
-                        <tr>
-                            <td>Entradas</td>
-                            <td>Características, $X$</td>
-                        </tr>                        
-                        <tr>
-                            <td>Modelo</td>
-                            <td></td>
-                        </tr>
-                        <tr>
-                            <td>Error</td>
-                            <td>Error Clustering: $\propto |X1 - X2|$, Distancia (intra-inter) grupos</td>
-                        </tr>
-                    </table>                  
+                <section data-background="url('custom/images/logo_esquina.svg')" data-background-position="right bottom" data-background-repeat="no-repeat">
+                    <section>
+                        <img style="float: left" class="no-border" width="10%" src="custom/images/rombo.svg"/>
+                        <h1>Por frecuencia aprendizaje</h1>
+                    </section>
                 </section>
-                <section>
-                    <h2>Aprendizaje semi-Supervisado</h2>
-                    Pocos ejemplos con label y luego le pone el label solo al resto (por similaridades encontradas no supervisado)
+                <section data-background="url('custom/images/logo_esquina.svg')" data-background-position="right bottom" data-background-repeat="no-repeat">
+                    <section>
+                        <img style="float: left" class="no-border" width="10%" src="custom/images/rombo.svg"/>
+                        <h1>Por forma de generalización</h1>
+                    </section>
                 </section>
-                <section>
-                    <h2>Aprendizaje por Refuerzo</h2>
-                    <img class="no-border" width="80%" src="sessions/TiposSistemas/caracteristicasCarro.png">
-                </section>
-
-              
-
-            
-                <section>
-                    <h2>Aprendizaje Supervisado</h2>
-                    "Ejemplos marcados"(labeled)
-                    "Ejemplos con respuestas"
-
-                </section>
-            </section>
-            <section data-background="url('custom/images/logo_esquina.svg')" data-background-position="right bottom" data-background-repeat="no-repeat">
-                <section>
-                    <img style="float: left" class="no-border" width="10%" src="custom/images/rombo.svg"/>
-                    <h1>Por frecuencia aprendizaje</h1>
-                </section>                
-            </section>
-            <section data-background="url('custom/images/logo_esquina.svg')" data-background-position="right bottom" data-background-repeat="no-repeat">
-                <section>
-                    <img style="float: left" class="no-border" width="10%" src="custom/images/rombo.svg"/>
-                    <h1>Por forma de generalización</h1>
-                </section>                
-            </section>
+            </div>
         </div>
-    </div>
-    <script src="lib/js/head.min.js"></script>
-    <script src="js/reveal.js"></script>
-    <script>
-    // More info about config & dependencies:
-    // - https://github.com/hakimel/reveal.js#configuration
-    // - https://github.com/hakimel/reveal.js#dependencies
-    Reveal.initialize({
+        <script src="lib/js/head.min.js"></script>
+        <script src="js/reveal.js"></script>
+        <script>
+        // More info about config & dependencies:
+        // - https://github.com/hakimel/reveal.js#configuration
+        // - https://github.com/hakimel/reveal.js#dependencies
+        Reveal.initialize({
         defaultTiming: 120,
         zoomKey: 'shift',
         history: true,
         progress: true,
         math: {
-            mathjax: 'https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.0/MathJax.js',
-            config: 'TeX-AMS_HTML-full'  // See http://docs.mathjax.org/en/latest/config-files.html
+        mathjax: 'https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.0/MathJax.js',
+        config: 'TeX-AMS_HTML-full' // See http://docs.mathjax.org/en/latest/config-files.html
         },
         dependencies: [
-            { src: 'plugin/markdown/marked.js' },
-            { src: 'plugin/markdown/markdown.js' },
-            { src: 'plugin/zoom-js/zoom.js', async: true },
-            { src: 'plugin/highlight/highlight.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } },
-            { src: 'plugin/notes/notes.js', async: true },
-            { src: 'plugin/math/math.js', async: true }
+        { src: 'plugin/markdown/marked.js' },
+        { src: 'plugin/markdown/markdown.js' },
+        { src: 'plugin/zoom-js/zoom.js', async: true },
+        { src: 'plugin/highlight/highlight.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } },
+        { src: 'plugin/notes/notes.js', async: true },
+        { src: 'plugin/math/math.js', async: true }
         ]
-    });
-    </script>
-</body>
-
+        });
+        </script>
+    </body>
 </html>
