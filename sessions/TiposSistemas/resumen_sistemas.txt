@@ -1,0 +1,32 @@
+
+Una base de datos de entrenamiento es una colección de observaciones (muestras, ocurrencias, instancias).
+Las observaciones se pueden dividir en variables de entrada y variables de salidas.
+Las variables de entrada o predictores son variables independientes que caracterizan la observación.
+Las variables de salida o etiquetas son variables dependientes que caracterizan la respuesta.
+
+Estilos de aprendizaje:
+
+Con base en como recibe las respuestas de las observaciones de entrenamiento.
+    Supervisado: En un sistema supervisado todas las observaciones de la base de datos de entrenamiento están etiquetadas.
+        Regresión: Realiza predicciones donde las respuestas son variables continuas.
+        Clasificación: Realiza predicciones donde las respuestas son categóricas.
+    No supervisado: En un sistema no supervisado las observaciones de la base de datos de entrenamiento no están etiquetadas.
+        Agrupamiento (Clustering): Identifica grupos dentro de los datos de entrenamiento.
+        Reducción dimensional: Identifica los predictores más relevantes.
+        Asociación: Identifica relación entre grupos.
+    Semi-supervisado: En un sistema semi-supervisado parte de las observaciones de la base de datos de entrenamiento están etiquetadas.
+    Reforzado: En un sistema por refuerzo se aprende a partir de prueba y error por medio de un sistema de recompensa y castigo 
+
+Con base en como utiliza las observaciones nuevas para entrenarse.
+    En lote: Se utilizan todas las observaciones para entrenar los modelos.
+        Si llegan observaciones nuevas, se debe entrenar desde cero.
+    En linea: Se utilizan segmentos de las observaciones para entrenar el modelo.
+        Si llegan observaciones nuevas, se actualiza el entrenamiento anterior.
+
+Con base en como estima las respuestas de observaciones por fuera de los datos de entrenamiento.
+    Basado en instancias: Hace estimaciones buscando relaciones y comparando con los datos de entrenamiento.
+        Hace referencia explicita a los datos de entrenamiento.
+        Casi nunca se basan en parámetros.
+    Basado en modelos: Hace estimaciones con un modelo que desarrollo con los datos de entrenamiento.
+        No hace referencia explicita a los datos de entrenamiento.
+        Casi siempre se basan en parámetros.
