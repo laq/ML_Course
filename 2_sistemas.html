@@ -193,14 +193,20 @@
                     </section>
                     <section>
                         <h2>Aprendizaje No Supervisado</h2>
-                        <p>Visualización</p>
-                        <img class="no-border" width="80%" src="sessions/TiposSistemas/clustering.png">
+                        <p>Visualización y Reducción Dimensionalidad</p>
+                        <img class="no-border" width="80%" src="sessions/TiposSistemas/visualizacion.png">
                     </section>
                     <section>
                         <h2>Aprendizaje No Supervisado</h2>
-                        <p>Reducción de Dimensionalidad</p>
-                        <img class="no-border" width="80%" src="sessions/TiposSistemas/clustering.png">
+                        <p>Visualización y Reducción Dimensionalidad</p>
+                        <img class="no-border" width="60%" src="sessions/TiposSistemas/Dimensionality.png">
                     </section>
+                    <section>
+                        <h2>Aprendizaje No Supervisado</h2>
+                        <p>Reglas Asociación</p>
+                        <img class="no-border" width="80%" src="sessions/TiposSistemas/asociationRules.jpg">
+                    </section>
+
                     <section>
                         <h2>Aprendizaje No Supervisado</h2>
                         <table>
@@ -224,22 +230,34 @@
                     </section>
                     <section>
                         <h2>Aprendizaje semi-Supervisado</h2>
-                        Pocos ejemplos con label y luego le pone el label solo al resto (por similaridades encontradas no supervisado)
+                        <img class="no-border" width="50%" src="sessions/TiposSistemas/faceRecognition.jpg">
+                        <p>Pocos ejemplos con etiquetas</p>
+                        <p>Muchos ejemplos sin etiquetas</p>
                     </section>
                     <section>
                         <h2>Aprendizaje por Refuerzo</h2>
-                        <img class="no-border" width="80%" src="sessions/TiposSistemas/caracteristicasCarro.png">
+                        <img class="no-border" width="70%" src="sessions/TiposSistemas/labyrinth.jpg">
                     </section>
                     <section>
-                        <h2>Aprendizaje Supervisado</h2>
-                        "Ejemplos marcados"(labeled)
-                        "Ejemplos con respuestas"
+                        <h3>De los ejemplos que cada uno trajo, ¿Como se clasifica cada uno?</h3>
                     </section>
                 </section>
                 <section data-background="url('custom/images/logo_esquina.svg')" data-background-position="right bottom" data-background-repeat="no-repeat">
                     <section>
                         <img style="float: left" class="no-border" width="10%" src="custom/images/rombo.svg"/>
-                        <h1>Por frecuencia aprendizaje</h1>
+                        <h1>Por "frecuencia" aprendizaje</h1>
+                    </section>
+                    <section>
+                        <h2>Batch Learning - Offline learning</h2>
+                        <p>Ejemplos completos</p>
+                        <p>Muchos recursos(Memoria, CPU)</p>
+                        <p>Se reentrena</p>
+                    </section>
+                    <section>
+                        <h2>Online Learning</h2>                        
+                        <p>Incremental</p>
+                        <p>Cada ejemplo al vuelo</p>
+                        <p>Se puede prender o apagar el aprendizaje</p>
                     </section>
                 </section>
                 <section data-background="url('custom/images/logo_esquina.svg')" data-background-position="right bottom" data-background-repeat="no-repeat">
@@ -247,7 +265,53 @@
                         <img style="float: left" class="no-border" width="10%" src="custom/images/rombo.svg"/>
                         <h1>Por forma de generalización</h1>
                     </section>
+                    <section>
+                        <h2>Basado en Instancias</h2>
+                        <p>Use los similares a los ejemplos</p>
+                        <p>Ejemplos + Medida Similaridad</p>
+                    </section>
+                    <section>
+                        <h2>Basado en Modelos</h2>
+                        <p>Construir modelo de los ejemplos</p>
+                        <p>Función de Costo</p>
+                    </section>
                 </section>
+                <section section data-background="url('custom/images/logo_esquina.svg')" data-background-position="right bottom" data-background-repeat="no-repeat">
+                    <section>
+                        <img style="float: left" class="no-border" width="10%" src="custom/images/rombo.svg"/>
+                        <h1>Términos clave</h1>
+                    </section>
+                    <section>
+                        <h2>¿Qué es? Ejemplos</h2>                        
+                        <p><span class="fragment">Etiqueta</span> - <span class="fragment">Label $y$</span></p>
+                        <p><span class="fragment">Característica</span> - <span class="fragment">Features $x$</span></p>
+                        <p><span class="fragment">Ejemplo</span> - <span class="fragment">Examples $(x,y)$</span></p>
+                        <aside class="notes">
+                            Ejemplos:
+                                Con Etiqueta(Características + Etiqueta)
+                                Sin Etiqueta(Características)
+                        </aside>                       
+                    </section>
+                    <section>
+                        <h2>¿Qué es? Ejemplos</h2>
+                        <p><span class="fragment">Modelo</span> - <span class="fragment">Model $f(x)$</span></p>
+                        <p><span class="fragment">Inferencia</span> - <span class="fragment">Inference $f(x)=y'$</span></p>
+                        <p><span class="fragment">Entrenamiento</span> - <span class="fragment">Training $min(Error)$</span></p>
+                        <p class="fragment"> $ \min_{\forall ej.} \sum{|y-y'|}$</p>
+                        <aside class="notes">
+                            Ejemplos:
+                                Con Etiqueta(Características + Etiqueta)
+                                Sin Etiqueta(Características)
+                        </aside>                       
+                    </section>
+                </section>
+                <section>
+                    <a href="https://developers.google.com/machine-learning/crash-course/framing/ml-terminology">Terminologia ML</a>
+                </section>
+                <section>
+                    https://colab.research.google.com/drive/1EHu9kzOJb5ZaEq_gZrg_2IXLRfKwFtno?authuser=1
+                </section>
+
             </div>
         </div>
         <script src="lib/js/head.min.js"></script>
