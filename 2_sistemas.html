@@ -312,13 +312,38 @@
                     </section>
                     <section>
                         <p><a href="https://developers.google.com/machine-learning/crash-course/framing/ml-terminology">Resumen</a></p>
-                        <p><a href="sessions/TiposSistemas/resumen_sistemas.txt">Terminologia ML</a></p>
+                        <p><a href="sessions/TiposSistemas/resumen_sistemas.txt">Terminología ML</a></p>
                     </section>
                 </section>
                 <section>
                     <section>
                         <img style="float: left" class="no-border" width="10%" src="custom/images/rombo.svg"/>
                         <h1>Ejercicios</h1>
+                    </section>
+                    <section>
+                        <h2>Ejercicio minimización</h2>
+                        <img class="no-border" width="40%" src="sessions/TiposSistemas/cloudy.jpeg">
+                        <p><input type="number" id="f1_in"><button onclick="func(1);">Test1</button> R:<span id="f1_out"></span></p>
+                        <p><input type="number" id="f2_in"><button onclick="func(2);">Test2</button> R:<span id="f2_out"></span></p>
+                        <aside class="notes">
+                            (x-2.15)^2-2              
+                            2.15,2
+                            (x-2)^4+(x-2)^3-2(x-2)^2+4    
+                            3.443,1.167
+                            1.307,3.603
+                        </aside>
+                        <script type="text/javascript">                            
+                            function func(problem){
+                                var in_id = 'f'+problem+'_in';                                
+                                var out_id = 'f'+problem+'_out';
+                                var fun = problem == 1? x => Math.pow((x-2.15),2)+1.5 : x=> Math.pow(x-2,4)-Math.pow(x-2,3)-2*Math.pow(x-2,2)+4 
+                                var in_text = document.getElementById(in_id).value;
+                                var in_val = parseFloat(in_text);                                
+                                document.getElementById(out_id).innerHTML=fun(in_val).toFixed(4);
+                            }
+
+                        </script>
+                        
                     </section>
                 </section>                
                 <section>
