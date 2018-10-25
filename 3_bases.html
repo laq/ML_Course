@@ -1,163 +1,265 @@
 <!doctype html>
 <html>
-    <head>
-        <meta charset="utf-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
-        <title>S4N</title>
-        <link rel="stylesheet" href="css/reveal.css">
-        <link rel="stylesheet" href="css/theme/seven.css">
-        <!-- Theme used for syntax highlighting of code -->
-        <link rel="stylesheet" href="lib/css/zenburn.css">
-        <link rel="stylesheet" href="custom/css/cssimages.css">
-        <!-- Printing and PDF exports -->
-        <script>
-                    var link = document.createElement( 'link' );
-                    link.rel = 'stylesheet';
-                    link.type = 'text/css';
-                    link.href = window.location.search.match( /print-pdf/gi ) ? 'css/print/pdf.css' : 'css/print/paper.css';
-                    document.getElementsByTagName( 'head' )[0].appendChild( link );
-        </script>
-    </head>
-    <body>
-        <div id="left"></div>
-        <div id="right"></div>
-        <div id="top"></div>
-        <div id="bottom"></div>
-        <div class="reveal">
-            <div class="slides">
-                <section data-background="url('custom/images/logo_esquina_intro_end.svg'), linear-gradient(to right, #443548, #b71930, #e94635)"
-                    data-background-position="right bottom" data-background-repeat="no-repeat">
-                    <img class="no-border" width="5%" src="custom/images/rombo.svg"/>
-                    <img class="no-border" width="13%" src="custom/images/s4n.svg"/>
-                    <h1 class="white-font">ML</h1>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>S4N</title>
+    <link rel="stylesheet" href="css/reveal.css">
+    <link rel="stylesheet" href="css/theme/seven.css">
+    <!-- Theme used for syntax highlighting of code -->
+    <link rel="stylesheet" href="lib/css/zenburn.css">
+    <link rel="stylesheet" href="custom/css/cssimages.css">
+    <!-- Printing and PDF exports -->
+    <script>
+    var link = document.createElement('link');
+    link.rel = 'stylesheet';
+    link.type = 'text/css';
+    link.href = window.location.search.match(/print-pdf/gi) ? 'css/print/pdf.css' : 'css/print/paper.css';
+    document.getElementsByTagName('head')[0].appendChild(link);
+    </script>
+</head>
+
+<body>
+    <div id="left"></div>
+    <div id="right"></div>
+    <div id="top"></div>
+    <div id="bottom"></div>
+    <div class="reveal">
+        <div class="slides">
+            <section data-background="url('custom/images/logo_esquina_intro_end.svg'), linear-gradient(to right, #443548, #b71930, #e94635)" data-background-position="right bottom" data-background-repeat="no-repeat">
+                <img class="no-border" width="5%" src="custom/images/rombo.svg"/>
+                <img class="no-border" width="13%" src="custom/images/s4n.svg"/>
+                <h1 class="white-font">ML</h1>
+            </section>
+            <!--Contenido-->
+            <section data-background="url('custom/images/logo_esquina.svg')" data-background-position="right bottom" data-background-repeat="no-repeat">
+                <section>
+                    <img style="float: left" class="no-border" width="10%" src="custom/images/rombo.svg"/>
+                    <h1>Bases ML</h1>
+                    <h2>Error - Función Perdida - Función Error </h2>
                 </section>
-                <!--Contenido-->
-                <section data-background="url('custom/images/logo_esquina.svg')" data-background-position="right bottom" data-background-repeat="no-repeat">
-                    <section>
-                        <img style="float: left" class="no-border" width="10%" src="custom/images/rombo.svg"/>
-                        <h1>Bases ML</h1>                        
-                        <h2>Error - Función Perdida - Función Error </h2>
-                    </section>
-                    <section>
-                        <h2>Antes:</h2>
-                        <table>
-                        <tr><td>Entrenamiento</td>
+                <section>
+                    <h2>Antes:</h2>
+                    <table>
+                        <tr>
+                            <td>Entrenamiento</td>
                             <td>$X$</td>
                             <td>Valores Discretos</td>
                         </tr>
-                        <tr><td>Optimización</td>
+                        <tr>
+                            <td>Optimización</td>
                             <td>Inferencia</td>
                             <td>No Supervisado</td>
                         </tr>
-                        <tr><td>Ejemplos</td>
+                        <tr>
+                            <td>Ejemplos</td>
                             <td>$Y'$</td>
                             <td>Supervisado</td>
                         </tr>
-                        <tr><td>Regresión</td>
+                        <tr>
+                            <td>Regresión</td>
                             <td>Etiqueta</td>
                             <td>Agrupamiento</td>
                         </tr>
-                        <tr><td>Refuerzo</td>
+                        <tr>
+                            <td>Refuerzo</td>
                             <td>Objetivo</td>
                             <td>Reducción Dimensionalidad</td>
                         </tr>
-                        <tr><td>Clasificación</td>
+                        <tr>
+                            <td>Clasificación</td>
                             <td>Error</td>
                             <td>Valores Continuos</td>
                         </tr>
-                        <tr><td>Características</td>
+                        <tr>
+                            <td>Características</td>
                             <td>Modelo</td>
                             <td>$\propto |Y - Y'|$</td>
                         </tr>
+                    </table>
+                </section>
+                <section>
+                    <h2>Si ML suele ser iterativo,</h2>
+                    <h2>¿Cómo comparo modelos?</h2>
+                </section>
+                <section>
+                    <h2>Iniciemos con un ejemplo</h2>
+                    <img class="no-border" src="sessions/Bases/Jiminy_Cricket.png">
+                </section>
+                    <section>
+                        <h2><a href="http://math.colgate.edu/math102/dschult/examples/chrptemp.html">Ejemplo</a></h2>
+                        <table>
+                            <tr>
+                                <th>Temp ºF</th>
+                                <th>Chirps 15 sec</th>
+                            </tr>
+                            <tr>
+                                <td>89</td>
+                                <td>20</td>
+                            </tr>
+                            <tr>
+                                <td>72</td>
+                                <td>16</td>
+                            </tr>
+                            <tr>
+                                <td>93</td>
+                                <td>20</td>
+                            </tr>
+                            <tr>
+                                <td>84</td>
+                                <td>18</td>
+                            </tr>
+                            <tr>
+                                <td>81</td>
+                                <td>17</td>
+                            </tr>
+                            <tr>
+                                <td>70</td>
+                                <td>15</td>
+                            </tr>
+                            <tr>
+                                <td>82</td>
+                                <td>17</td>
+                            </tr>
+                            <tr>
+                                <td>69</td>
+                                <td>15</td>
+                            </tr>
+                            <tr>
+                                <td>83</td>
+                                <td>16</td>
+                            </tr>
+                            <tr>
+                                <td>80</td>
+                                <td>15</td>
+                            </tr>
+                            <tr>
+                                <td>83</td>
+                                <td>17</td>
+                            </tr>
+                            <tr>
+                                <td>81</td>
+                                <td>16</td>
+                            </tr>
+                            <tr>
+                                <td>84</td>
+                                <td>17</td>
+                            </tr>
+                            <tr>
+                                <td>76</td>
+                                <td>14</td>
+                            </tr>
                         </table>
                     </section>
-                    <section>
-                        <h2>Si ML suele ser iterativo,</h2>
-                        <h2>¿Cómo comparo modelos?</h2>
+
+                    <section>                        
+                        <img class="no-border" src="sessions/Bases/Cricket_csv_read.png">
+                        <p><a target="_blank" href="https://raw.githubusercontent.com/laq/ML_Course/master/sessions/Bases/crickets.csv">csv</a></p>                        
+                        <p><a target="_blank" href="https://colab.research.google.com/drive/1zp7EWztmdaaNzRjY_oKGSlKa0miiV0oU#forceEdit=true&offline=true&sandboxMode=true">Colab</a></p>
                     </section>
                     <section>
-                        <h2>Iniciemos con un ejemplo</h2>
-                        <img src="sessions/Bases/Jiminy_Cricket.png">
+                        <h2>¿Qué tenemos?</h2>
+                        <img class="no-border" src="sessions/Bases/Cricket_describe.png">
                     </section>
                     <section>
-<h2><a href="http://math.colgate.edu/math102/dschult/examples/chrptemp.html">Ejemplo</a></h2>
-<table>
-<tr><th>Temp ºF</th><th>Chirps 15 sec</th></tr>
-<tr><td>89</td><td>20</td></tr>
-<tr><td>72</td><td>16</td></tr>
-<tr><td>93</td><td>20</td></tr>
-<tr><td>84</td><td>18</td></tr>
-<tr><td>81</td><td>17</td></tr>
-<tr><td>75</td><td>16</td></tr>
-<tr><td>70</td><td>15</td></tr>
-<tr><td>82</td><td>17</td></tr>
-<tr><td>69</td><td>15</td></tr>
-<tr><td>83</td><td>16</td></tr>
-<tr><td>80</td><td>15</td></tr>
-<tr><td>83</td><td>17</td></tr>
-<tr><td>81</td><td>16</td></tr>
-<tr><td>84</td><td>17</td></tr>
-<tr><td>76</td><td>14</td></tr>
-</table>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+                        <h2>¿Qué tenemos?</h2>
+                        <img class="no-border" src="sessions/Bases/Cricket_scatter.png">
                     </section>
                     <section>
-                        
+                        <h2>¿A qué se me parece?</h2>
+                        <p class="fragment">A una Linea!</p>
+                        <p class="fragment">$y=mx+b$</p>
+                        <p class="fragment">$\downarrow$</p>
+                        <p class="fragment">$y'=b+w_1x_1$</p>                        
+                        <p class="fragment">$y'=w_0+w_1x_1$</p>
+                    </section>
+                    <section>
+                        <p>$y'=b+w_1x_1$</p>
+                        <table>
+                            <tr><td>$y'$</td><td> <p class="fragment">Label</p></td></tr>
+                            <tr><td>$b$</td><td> <p class="fragment">Bias ($w0$)</p></td></tr>
+                            <tr><td>$w1$</td><td><p class="fragment"><i>Weight</i>- Peso característica 1</p></td></tr>
+                            <tr><td>$x1$</td><td><p class="fragment">Característica 1</p></td></tr>
+                        </table>                        
+                    </section>
+                    <section>
+                        <p>Si se tienen mas características :</p>
+                        <p>$y'=b+w_1x_1+w_2x_2$</p>
+                        <img class="no-border" src="sessions/Bases/plane.png">
+                    </section>
+                    <section>
+                        <h2>Volviendo a nuestro problema</h2>
+                        <img width="40%" class="no-border" src="sessions/Bases/Cricket_scatter.png">
+                        <p>$y'=b+w_1x_1$</p>                        
+                        <p class="fragment">Yo creo que $b=20$ y $w_1=1$</p>
+                        <p class="fragment">¿Como se si mis parámetros son buenos?</p>
+                    </section>
+                    <section>
+                        <h2>Función de Error - Perdida</h2>
+                        <p>$y'=b+w_1x_1$</p>
+                        <p>$b=0$ y $w_1=1$</p>
+                        <table>
+                            <tr>
+                                <th>Temp ºF</th>
+                                <th>Chirps 15 sec</th>
+                                <th>Predicción</th>
+                                <th>Error</th>
+                            </tr>
+                            <tr>
+                                <td>89</td>
+                                <td>20</td>
+                                <td>?</td>
+                                <td>?</td>
+                            </tr>
+                            <tr>
+                                <td>72</td>
+                                <td>16</td>
+                                <td>?</td>
+                                <td>?</td>
+                            </tr>
+                            <tr>
+                                <td>76</td>
+                                <td>14</td>
+                                <td>?</td>
+                                <td>?</td>
+                            </tr>
+                        </table>
+                        <p class="fragment">¿Error?</p>
+                    </section>
+                    <section>
+                        <p>Error por ejemplo</p>
+                        <p>$y-y'$</p>
+                        <p>$|y-y'|$</p>
+                        <p>Distancia $\sqrt(y^2 - y'^2)$</p>
                     </section>
                     <section>
                         Ejemplo
-
-
                         Que tan bueno es el modelo? Sistema?
-
                         Simple example
-                            Linear Model : House Prices
-                            Que tipo?
-                                Regresion
-                                Batch
-                                Model
-                                
-                            Cual linea?
-                                Elección parametros
-                                    Closed Form
-                                    Iterative Approach
-                                Cual linea es mejor?
-                                Select Performance Measure = Loss function = Error Function = Utility function
-                                Calculo Error
-
+                        Linear Model : House Prices
+                        Que tipo?
+                        Regresion
+                        Batch
+                        Model
+                        Cual linea?
+                        Elección parametros
+                        Closed Form
+                        Iterative Approach
+                        Cual linea es mejor?
+                        Select Performance Measure = Loss function = Error Function = Utility function
+                        Calculo Error
                         Reducción Error
-                            - Hill Descent
-
+                        - Hill Descent
                         Generalización
-                            Learning Curve
-                                Overfitting (Polinomial curve fitting)
-                            ROC curve
-
+                        Learning Curve
+                        Overfitting (Polinomial curve fitting)
+                        ROC curve
                         Iris , Pandas
                         Visualizacion
                         Medición de eficiencia
-                            Matrix de confusion
-                            F1 Score
-
-                        
+                        Matrix de confusion
+                        F1 Score
                     </section>
                     <section>
                         Big picture
@@ -165,78 +267,65 @@
                         Discover and visualize the data to gain insights
                         Prepare the data for Machine Learning Algorithms
                         Select a model and Train It
-                        Fine tune our model                       
-
+                        Fine tune our model
                     </section>
                     <section>
                         Big Picture
                         Frame the Problem
-                            Whats the current solution?
+                        Whats the current solution?
                         Select Performance Measure = Loss function = Error Function = Utility function
-                            Regression = RMSE = Root Mean Square Error (Euclidean Norm)
-                                         MAE = Mean Absolute Error (Manhattan norm, taxi distance)
-                                         RMSE more sensitive to outliers than MAE
-                            Categorias -> One Hot
-
-                                Basic Math
-                                    m = Number of Instances
-                                    X = Vector de Features
-                                    h = prediction function (Modelo)
+                        Regression = RMSE = Root Mean Square Error (Euclidean Norm)
+                        MAE = Mean Absolute Error (Manhattan norm, taxi distance)
+                        RMSE more sensitive to outliers than MAE
+                        Categorias -> One Hot
+                        Basic Math
+                        m = Number of Instances
+                        X = Vector de Features
+                        h = prediction function (Modelo)
                         Check Assumptions
-
                         Get Data (View data structure, create test set)
                         Visualize data (Visualize, look for correlations (corr, or scater matrix))
                         Feature Scaling
-
-
                         Training Set
                         Dev Set
-
                         Test Set (Evaluate Performance, As realistic as possible)
-
                         Train and Test set should come from the same distribution
                         (70-30) Test set should be the size of the performance precision you want to evaluate.
-
                         Use single metric (or combine multimple to have 1, if many, use threshold for N-1)
                         Then Iterate A lot!
-
                         If dev/test or metric have problems, change them.
-
-
-
-
-
                     </section>
                     <section>
                         Performance Measuere
                     </section>
                 </section>
-            </div>
         </div>
-        <script src="lib/js/head.min.js"></script>
-        <script src="js/reveal.js"></script>
-        <script>
-                        // More info about config & dependencies:
-                        // - https://github.com/hakimel/reveal.js#configuration
-                        // - https://github.com/hakimel/reveal.js#dependencies
-            Reveal.initialize({
-            defaultTiming: 120,
-            zoomKey: 'shift',
-            history: true,
-            progress: true,
-            math: {
+    </div>
+    <script src="lib/js/head.min.js"></script>
+    <script src="js/reveal.js"></script>
+    <script>
+    // More info about config & dependencies:
+    // - https://github.com/hakimel/reveal.js#configuration
+    // - https://github.com/hakimel/reveal.js#dependencies
+    Reveal.initialize({
+        defaultTiming: 120,
+        zoomKey: 'shift',
+        history: true,
+        progress: true,
+        math: {
             mathjax: 'https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.0/MathJax.js',
             config: 'TeX-AMS_HTML-full' // See http://docs.mathjax.org/en/latest/config-files.html
-            },
-            dependencies: [
+        },
+        dependencies: [
             { src: 'plugin/markdown/marked.js' },
             { src: 'plugin/markdown/markdown.js' },
             { src: 'plugin/zoom-js/zoom.js', async: true },
             { src: 'plugin/highlight/highlight.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } },
             { src: 'plugin/notes/notes.js', async: true },
             { src: 'plugin/math/math.js', async: true }
-            ]
-            });
-        </script>
-    </body>
+        ]
+    });
+    </script>
+</body>
+
 </html>
