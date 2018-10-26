@@ -265,7 +265,15 @@
                                     <p>Error por ejemplo</p>
                                     <p class="fragment">$y-y'$</p>
                                     <p class="fragment">$|y-y'|$</p>
-                                    <p class="fragment">$\sqrt{y^2 - y'^2}$</p>
+                                    <p class="fragment">$\sqrt{(y - y')^2}$</p>
+                                </section>
+                                <section>
+                                    <p>Error por ejemplo (2 Dimensiones)</p>                                    
+                                    <p>Manhatan Distance</p>
+                                    <p class="fragment">$|y_1-y_1'|+|y_2-y_2|$</p>
+                                    <p>Euclidean Distance</p>
+                                    <p class="fragment">$\sqrt{(y_1 - y_1')^2+(y_2 - y_2')^2}$</p>
+
                                 </section>
                                 <section>
                                     <p>Error por ejemplo</p>
@@ -309,12 +317,12 @@
                                         </tr>
                                         <tr>
                                             <td>
-                                                <p class="fragment">$E=\frac{1}{N}\sum_{i=1}^{N}{y_i^2 - y_i'^2}$</p>
+                                                <p class="fragment">$E=\frac{1}{N}\sum_{i=1}^{N}{(y_i-y_i')^2}$</p>
                                             </td>
                                             <td>
                                                 <p class="fragment"> <i>Mean Square Error</i>: MSE<SE</p> </td> </tr> <tr>
                                             <td>
-                                                <p class="fragment">$E=\sqrt{\frac{1}{N}\sum_{i=1}^{N}{y_i^2 - y_i'^2}}$</p>
+                                                <p class="fragment">$E=\sqrt{\frac{1}{N}\sum_{i=1}^{N}{(y_i - y_i')^2}}$</p>
                                             </td>
                                             <td>
                                                 <p class="fragment"> <i>Root Mean Square Error</i>: RMSE</p>
