@@ -153,6 +153,11 @@
                         </table>
                     </section>
                     <section>
+                        <p>Objetivo:</p>
+                        <p class="fragment">Quiero predecir la temperatura dada la cantidad de chirridos</p>
+                        <p class="fragment">¿Qué tipo de problema es?</p>
+                    </section>
+                    <section>
                         <img class="no-border" src="sessions/Bases/Cricket_csv_read.png">
                         <p><a target="_blank" href="https://raw.githubusercontent.com/laq/ML_Course/master/sessions/Bases/crickets.csv">csv</a></p>
                         <p><a target="_blank" href="https://colab.research.google.com/drive/1zp7EWztmdaaNzRjY_oKGSlKa0miiV0oU#forceEdit=true&offline=true&sandboxMode=true">Colab</a></p>
@@ -167,7 +172,7 @@
                     </section>
                             <section>
                                 <h2>¿A qué se me parece?</h2>
-                                <p class="fragment">A una Linea!</p>
+                                <p class="fragment">¡A una Linea!</p>
                                 <p class="fragment">$y=mx+b$</p>
                                 <p class="fragment">$\downarrow$</p>
                                 <p class="fragment">$y'=b+w_1x_1$</p>
@@ -179,13 +184,13 @@
                                     <tr>
                                         <td>$y'$</td>
                                         <td>
-                                            <p class="fragment">Label</p>
+                                            <p class="fragment"><i>Label</i>-Etiqueta</p>
                                         </td>
                                     </tr>
                                     <tr>
                                         <td>$b$</td>
                                         <td>
-                                            <p class="fragment">Bias ($w0$)</p>
+                                            <p class="fragment"><i>Bias</i> ($w0$)</p>
                                         </td>
                                     </tr>
                                     <tr>
@@ -209,10 +214,11 @@
                     </section>
                                 <section>
                                     <h2>Volviendo a nuestro problema</h2>
-                                    <img width="40%" class="no-border" src="sessions/Bases/Cricket_scatter.png">
+                                    <img width="30%" class="no-border" src="sessions/Bases/Cricket_scatter.png">
                                     <p>$y'=b+w_1x_1$</p>
+                                    <p class="fragment">¿Cuál linea?</p>
                                     <p class="fragment">Yo creo que $b=20$ y $w_1=1$</p>
-                                    <p class="fragment">¿Como se si mis parámetros son buenos?</p>
+                                    <p class="fragment">¿Cómo sé si mis parámetros son buenos?</p>
                                 </section>
                                 <section>
                                     <h2>Función de Error - Perdida</h2>
@@ -220,7 +226,7 @@
                                     <p>$b=20$ y $w_1=1$</p>
                                     <table>
                                         <tr>
-                                            <th>Chirps 15 sec</th>
+                                            <th>Chirridos 15s</th>
                                             <th>Temp ºF</th>
                                             <th>Predicción</th>
                                             <th>Error</th>
@@ -252,6 +258,10 @@
                                     <p>¿Cómo mido el error?</p>
                                 </section>
                                 <section>
+                                    <img src="sessions/Bases/Loss_Linear.png">
+                                    <p>De: <a href="https://developers.google.com/machine-learning/crash-course/images/LossSideBySide.png">Google ML Crash Course</a></p>
+                                </section>
+                                <section>
                                     <p>Error por ejemplo</p>
                                     <p class="fragment">$y-y'$</p>
                                     <p class="fragment">$|y-y'|$</p>
@@ -261,7 +271,7 @@
                                     <p>Error por ejemplo</p>
                                     <table>
                                         <tr>
-                                            <th>Chirps 15 sec</th>
+                                            <th>Chirridos 15s</th>
                                             <th>Temp ºF</th>
                                             <th>Predicción</th>
                                             <th>Error</th>
@@ -313,71 +323,44 @@
                                     </table>
                                 </section>
                                 <section>
-                                    Ejemplo
-                                    Que tan bueno es el modelo? Sistema?
-                                    Simple example
-                                    Linear Model : House Prices
-                                    Que tipo?
-                                    Regresion
-                                    Batch
-                                    Model
-                                    Cual linea?
-                                    Elección parametros
-                                    Closed Form
-                                    Iterative Approach
-                                    Cual linea es mejor?
-                                    Select Performance Measure = Loss function = Error Function = Utility function
-                                    Calculo Error
-                                    Reducción Error
-                                    - Hill Descent
-                                    Generalización
-                                    Learning Curve
-                                    Overfitting (Polinomial curve fitting)
-                                    ROC curve
-                                    Iris , Pandas
-                                    Visualizacion
-                                    Medición de eficiencia
-                                    Matrix de confusion
-                                    F1 Score
+                                    <p>Nota:</p>
+                                    <p>$N$ es el total de ejemplos</p>
+                                    <p>a veces usan $m$</p>
                                 </section>
                                 <section>
-                                    Big picture
-                                    Get Data
-                                    Discover and visualize the data to gain insights
-                                    Prepare the data for Machine Learning Algorithms
-                                    Select a model and Train It
-                                    Fine tune our model
+                                    <p>¿Cual par de parametros se ajusta más?</p>
+                                    <p class="fragment">¡Iteren!</p>
+                                    <p class="fragment">Descenso a la colina</p>
                                 </section>
                                 <section>
-                                    Big Picture
-                                    Frame the Problem
-                                    Whats the current solution?
-                                    Select Performance Measure = Loss function = Error Function = Utility function
-                                    Regression = RMSE = Root Mean Square Error (Euclidean Norm)
-                                    MAE = Mean Absolute Error (Manhattan norm, taxi distance)
-                                    RMSE more sensitive to outliers than MAE
-                                    Categorias -> One Hot
-                                    Basic Math
-                                    m = Number of Instances
-                                    X = Vector de Features
-                                    h = prediction function (Modelo)
-                                    Check Assumptions
-                                    Get Data (View data structure, create test set)
-                                    Visualize data (Visualize, look for correlations (corr, or scater matrix))
-                                    Feature Scaling
-                                    Training Set
-                                    Dev Set
-                                    Test Set (Evaluate Performance, As realistic as possible)
-                                    Train and Test set should come from the same distribution
-                                    (70-30) Test set should be the size of the performance precision you want to evaluate.
-                                    Use single metric (or combine multimple to have 1, if many, use threshold for N-1)
-                                    Then Iterate A lot!
-                                    If dev/test or metric have problems, change them.
+                                    <img src="qr">
+                                    <a target="_blank" href="https://colab.research.google.com/drive/1zp7EWztmdaaNzRjY_oKGSlKa0miiV0oU#forceEdit=true&offline=true&sandboxMode=true">Colab</a>
+                                </section>                                
+                            </section>
+                            <section>
+                                <section>
+                                    <h2>Otros Conceptos</h2>
+                                    <p>Learning Curve</p>
+                                    <p>Overfitting (Ejemplo con polinomios en vez de rectas)</p>
+                                    <p>ROC curve</p>
                                 </section>
                                 <section>
-                                    Performance Measuere
+                                    <h2>Otro Conjunto de Datos</h2>
+                                    <a href="https://raw.githubusercontent.com/uiuc-cse/data-fa14/gh-pages/data/iris.csv">Iris</a>                                    
+                                </section>
+                                <section>
+                                    <h2>Otros Conceptos</h2>
+                                    <p>Test,Validation,Train Sets</p>                                    
+                                    <p>Matrix de confusion</p>
+                                    <p>Precision(Cuantos de los elegidos eran importantes): $\frac{TP}{TP+FP}$</p>
+                                    <p>Recall(Cuandos de los importantes fueron elegidos): $\frac{TP}{TP+FN}$</p>
+                                    <p>F1 Score: $2\frac{precision*recall}{precision+recall}$</p>
                                 </section>
                             </section>
+                            <section>
+                                <a href="https://colab.research.google.com/drive/16kFW0HiquK_E9PIne__WyH2LkicgPmsb?authuser=1#scrollTo=cH_3N2QeRGJx&forceEdit=true&offline=true&sandboxMode=true">Colab Sesion2</a>
+                            </section>
+
         </div>
     </div>
     <script src="lib/js/head.min.js"></script>
