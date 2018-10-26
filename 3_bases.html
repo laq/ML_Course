@@ -152,153 +152,232 @@
                             </tr>
                         </table>
                     </section>
-
-                    <section>                        
+                    <section>
                         <img class="no-border" src="sessions/Bases/Cricket_csv_read.png">
-                        <p><a target="_blank" href="https://raw.githubusercontent.com/laq/ML_Course/master/sessions/Bases/crickets.csv">csv</a></p>                        
+                        <p><a target="_blank" href="https://raw.githubusercontent.com/laq/ML_Course/master/sessions/Bases/crickets.csv">csv</a></p>
                         <p><a target="_blank" href="https://colab.research.google.com/drive/1zp7EWztmdaaNzRjY_oKGSlKa0miiV0oU#forceEdit=true&offline=true&sandboxMode=true">Colab</a></p>
                     </section>
                     <section>
                         <h2>¿Qué tenemos?</h2>
                         <img class="no-border" src="sessions/Bases/Cricket_describe.png">
                     </section>
-                    <section>
-                        <h2>¿Qué tenemos?</h2>
-                        <img class="no-border" src="sessions/Bases/Cricket_scatter.png">
+                        <section>
+                            <h2>¿Qué tenemos?</h2>
+                            <img class="no-border" src="sessions/Bases/Cricket_scatter.png">
                     </section>
-                    <section>
-                        <h2>¿A qué se me parece?</h2>
-                        <p class="fragment">A una Linea!</p>
-                        <p class="fragment">$y=mx+b$</p>
-                        <p class="fragment">$\downarrow$</p>
-                        <p class="fragment">$y'=b+w_1x_1$</p>                        
-                        <p class="fragment">$y'=w_0+w_1x_1$</p>
+                            <section>
+                                <h2>¿A qué se me parece?</h2>
+                                <p class="fragment">A una Linea!</p>
+                                <p class="fragment">$y=mx+b$</p>
+                                <p class="fragment">$\downarrow$</p>
+                                <p class="fragment">$y'=b+w_1x_1$</p>
+                                <p class="fragment">$y'=w_0+w_1x_1$</p>
+                            </section>
+                            <section>
+                                <p>$y'=b+w_1x_1$</p>
+                                <table>
+                                    <tr>
+                                        <td>$y'$</td>
+                                        <td>
+                                            <p class="fragment">Label</p>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>$b$</td>
+                                        <td>
+                                            <p class="fragment">Bias ($w0$)</p>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>$w1$</td>
+                                        <td>
+                                            <p class="fragment"><i>Weight</i>- Peso característica 1</p>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>$x1$</td>
+                                        <td>
+                                            <p class="fragment">Característica 1</p>
+                                        </td>
+                                    </tr>
+                                </table>
+                            </section>
+                            <section>
+                                <p>Si se tienen mas características :</p>
+                                <p>$y'=b+w_1x_1+w_2x_2$</p>
+                                <img class="no-border" src="sessions/Bases/plane.png">
                     </section>
-                    <section>
-                        <p>$y'=b+w_1x_1$</p>
-                        <table>
-                            <tr><td>$y'$</td><td> <p class="fragment">Label</p></td></tr>
-                            <tr><td>$b$</td><td> <p class="fragment">Bias ($w0$)</p></td></tr>
-                            <tr><td>$w1$</td><td><p class="fragment"><i>Weight</i>- Peso característica 1</p></td></tr>
-                            <tr><td>$x1$</td><td><p class="fragment">Característica 1</p></td></tr>
-                        </table>                        
-                    </section>
-                    <section>
-                        <p>Si se tienen mas características :</p>
-                        <p>$y'=b+w_1x_1+w_2x_2$</p>
-                        <img class="no-border" src="sessions/Bases/plane.png">
-                    </section>
-                    <section>
-                        <h2>Volviendo a nuestro problema</h2>
-                        <img width="40%" class="no-border" src="sessions/Bases/Cricket_scatter.png">
-                        <p>$y'=b+w_1x_1$</p>                        
-                        <p class="fragment">Yo creo que $b=20$ y $w_1=1$</p>
-                        <p class="fragment">¿Como se si mis parámetros son buenos?</p>
-                    </section>
-                    <section>
-                        <h2>Función de Error - Perdida</h2>
-                        <p>$y'=b+w_1x_1$</p>
-                        <p>$b=0$ y $w_1=1$</p>
-                        <table>
-                            <tr>
-                                <th>Temp ºF</th>
-                                <th>Chirps 15 sec</th>
-                                <th>Predicción</th>
-                                <th>Error</th>
-                            </tr>
-                            <tr>
-                                <td>89</td>
-                                <td>20</td>
-                                <td>?</td>
-                                <td>?</td>
-                            </tr>
-                            <tr>
-                                <td>72</td>
-                                <td>16</td>
-                                <td>?</td>
-                                <td>?</td>
-                            </tr>
-                            <tr>
-                                <td>76</td>
-                                <td>14</td>
-                                <td>?</td>
-                                <td>?</td>
-                            </tr>
-                        </table>
-                        <p class="fragment">¿Error?</p>
-                    </section>
-                    <section>
-                        <p>Error por ejemplo</p>
-                        <p class="fragment">$y-y'$</p>
-                        <p class="fragment">$|y-y'|$</p>
-                        <p class="fragment">$\sqrt{y^2 - y'^2}$</p>
-                    </section>
-                    <section>
-                        Ejemplo
-                        Que tan bueno es el modelo? Sistema?
-                        Simple example
-                        Linear Model : House Prices
-                        Que tipo?
-                        Regresion
-                        Batch
-                        Model
-                        Cual linea?
-                        Elección parametros
-                        Closed Form
-                        Iterative Approach
-                        Cual linea es mejor?
-                        Select Performance Measure = Loss function = Error Function = Utility function
-                        Calculo Error
-                        Reducción Error
-                        - Hill Descent
-                        Generalización
-                        Learning Curve
-                        Overfitting (Polinomial curve fitting)
-                        ROC curve
-                        Iris , Pandas
-                        Visualizacion
-                        Medición de eficiencia
-                        Matrix de confusion
-                        F1 Score
-                    </section>
-                    <section>
-                        Big picture
-                        Get Data
-                        Discover and visualize the data to gain insights
-                        Prepare the data for Machine Learning Algorithms
-                        Select a model and Train It
-                        Fine tune our model
-                    </section>
-                    <section>
-                        Big Picture
-                        Frame the Problem
-                        Whats the current solution?
-                        Select Performance Measure = Loss function = Error Function = Utility function
-                        Regression = RMSE = Root Mean Square Error (Euclidean Norm)
-                        MAE = Mean Absolute Error (Manhattan norm, taxi distance)
-                        RMSE more sensitive to outliers than MAE
-                        Categorias -> One Hot
-                        Basic Math
-                        m = Number of Instances
-                        X = Vector de Features
-                        h = prediction function (Modelo)
-                        Check Assumptions
-                        Get Data (View data structure, create test set)
-                        Visualize data (Visualize, look for correlations (corr, or scater matrix))
-                        Feature Scaling
-                        Training Set
-                        Dev Set
-                        Test Set (Evaluate Performance, As realistic as possible)
-                        Train and Test set should come from the same distribution
-                        (70-30) Test set should be the size of the performance precision you want to evaluate.
-                        Use single metric (or combine multimple to have 1, if many, use threshold for N-1)
-                        Then Iterate A lot!
-                        If dev/test or metric have problems, change them.
-                    </section>
-                    <section>
-                        Performance Measuere
-                    </section>
-                </section>
+                                <section>
+                                    <h2>Volviendo a nuestro problema</h2>
+                                    <img width="40%" class="no-border" src="sessions/Bases/Cricket_scatter.png">
+                                    <p>$y'=b+w_1x_1$</p>
+                                    <p class="fragment">Yo creo que $b=20$ y $w_1=1$</p>
+                                    <p class="fragment">¿Como se si mis parámetros son buenos?</p>
+                                </section>
+                                <section>
+                                    <h2>Función de Error - Perdida</h2>
+                                    <p>$y'=b+w_1x_1$</p>
+                                    <p>$b=20$ y $w_1=1$</p>
+                                    <table>
+                                        <tr>
+                                            <th>Chirps 15 sec</th>
+                                            <th>Temp ºF</th>
+                                            <th>Predicción</th>
+                                            <th>Error</th>
+                                        </tr>
+                                        <tr>
+                                            <td>20</td>
+                                            <td>89</td>
+                                            <td>?</td>
+                                            <td>?</td>
+                                        </tr>
+                                        <tr>
+                                            <td>16</td>
+                                            <td>72</td>
+                                            <td>?</td>
+                                            <td>?</td>
+                                        </tr>
+                                        <tr>
+                                            <td>14</td>
+                                            <td>76</td>
+                                            <td>?</td>
+                                            <td>?</td>
+                                        </tr>
+                                    </table>
+                                    <p class="fragment">¿Error?</p>
+                                </section>
+                                <section>
+                                    <p>Valores reales vs predicción</p>
+                                    <img src="sessions/Bases/Cricket_scatter_pred.png">
+                                    <p>¿Cómo mido el error?</p>
+                                </section>
+                                <section>
+                                    <p>Error por ejemplo</p>
+                                    <p class="fragment">$y-y'$</p>
+                                    <p class="fragment">$|y-y'|$</p>
+                                    <p class="fragment">$\sqrt{y^2 - y'^2}$</p>
+                                </section>
+                                <section>
+                                    <p>Error por ejemplo</p>
+                                    <table>
+                                        <tr>
+                                            <th>Chirps 15 sec</th>
+                                            <th>Temp ºF</th>
+                                            <th>Predicción</th>
+                                            <th>Error</th>
+                                        </tr>
+                                        <tr>
+                                            <td>20</td>
+                                            <td>89</td>
+                                            <td>40</td>
+                                            <td>?</td>
+                                        </tr>
+                                        <tr>
+                                            <td>16</td>
+                                            <td>72</td>
+                                            <td>36</td>
+                                            <td>?</td>
+                                        </tr>
+                                        <tr>
+                                            <td>14</td>
+                                            <td>76</td>
+                                            <td>34</td>
+                                            <td>?</td>
+                                        </tr>
+                                    </table>
+                                </section>
+                                <section>
+                                    <p>Error promedio</p>
+                                    <table>
+                                        <tr>
+                                            <td>
+                                                <p class="fragment">$E=\frac{1}{N}\sum_{i=1}^{N}{|y_i-y_i'|}$</p>
+                                            </td>
+                                            <td>
+                                                <p class="fragment"> <i>Mean Absolute Error</i>: MAE</p>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>
+                                                <p class="fragment">$E=\frac{1}{N}\sum_{i=1}^{N}{y_i^2 - y_i'^2}$</p>
+                                            </td>
+                                            <td>
+                                                <p class="fragment"> <i>Mean Square Error</i>: MSE<SE</p> </td> </tr> <tr>
+                                            <td>
+                                                <p class="fragment">$E=\sqrt{\frac{1}{N}\sum_{i=1}^{N}{y_i^2 - y_i'^2}}$</p>
+                                            </td>
+                                            <td>
+                                                <p class="fragment"> <i>Root Mean Square Error</i>: RMSE</p>
+                                            </td>
+                                        </tr>
+                                    </table>
+                                </section>
+                                <section>
+                                    Ejemplo
+                                    Que tan bueno es el modelo? Sistema?
+                                    Simple example
+                                    Linear Model : House Prices
+                                    Que tipo?
+                                    Regresion
+                                    Batch
+                                    Model
+                                    Cual linea?
+                                    Elección parametros
+                                    Closed Form
+                                    Iterative Approach
+                                    Cual linea es mejor?
+                                    Select Performance Measure = Loss function = Error Function = Utility function
+                                    Calculo Error
+                                    Reducción Error
+                                    - Hill Descent
+                                    Generalización
+                                    Learning Curve
+                                    Overfitting (Polinomial curve fitting)
+                                    ROC curve
+                                    Iris , Pandas
+                                    Visualizacion
+                                    Medición de eficiencia
+                                    Matrix de confusion
+                                    F1 Score
+                                </section>
+                                <section>
+                                    Big picture
+                                    Get Data
+                                    Discover and visualize the data to gain insights
+                                    Prepare the data for Machine Learning Algorithms
+                                    Select a model and Train It
+                                    Fine tune our model
+                                </section>
+                                <section>
+                                    Big Picture
+                                    Frame the Problem
+                                    Whats the current solution?
+                                    Select Performance Measure = Loss function = Error Function = Utility function
+                                    Regression = RMSE = Root Mean Square Error (Euclidean Norm)
+                                    MAE = Mean Absolute Error (Manhattan norm, taxi distance)
+                                    RMSE more sensitive to outliers than MAE
+                                    Categorias -> One Hot
+                                    Basic Math
+                                    m = Number of Instances
+                                    X = Vector de Features
+                                    h = prediction function (Modelo)
+                                    Check Assumptions
+                                    Get Data (View data structure, create test set)
+                                    Visualize data (Visualize, look for correlations (corr, or scater matrix))
+                                    Feature Scaling
+                                    Training Set
+                                    Dev Set
+                                    Test Set (Evaluate Performance, As realistic as possible)
+                                    Train and Test set should come from the same distribution
+                                    (70-30) Test set should be the size of the performance precision you want to evaluate.
+                                    Use single metric (or combine multimple to have 1, if many, use threshold for N-1)
+                                    Then Iterate A lot!
+                                    If dev/test or metric have problems, change them.
+                                </section>
+                                <section>
+                                    Performance Measuere
+                                </section>
+                            </section>
         </div>
     </div>
     <script src="lib/js/head.min.js"></script>
