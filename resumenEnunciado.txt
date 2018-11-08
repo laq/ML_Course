@@ -1,0 +1,32 @@
+Su corrientazo domicilio
+
+10 cuadras a la redonda
+
+x,y,n
+
+0,0,N  esquina inferior izquierda apuntando al norte
+
+
+
+Archivo 
+Pedidos del dia
+
+Carga hasta 3 almuerzos
+
+AAAAIAAD
+DDAIAD
+AAIADAD
+
+A Adelante
+I 90 Iz
+D 90 Der
+
+Inicia en 0,0,N
+
+
+== Reporte de Entregas ==
+(-2,4) dirección Norte
+
+in.txt
+out.txt
+
