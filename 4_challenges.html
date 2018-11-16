@@ -1,0 +1,232 @@
+<!doctype html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+        <title>S4N</title>
+        <link rel="stylesheet" href="css/reveal.css">
+        <link rel="stylesheet" href="css/theme/seven.css">
+        <!-- Theme used for syntax highlighting of code -->
+        <link rel="stylesheet" href="lib/css/zenburn.css">
+        <link rel="stylesheet" href="custom/css/cssimages.css">
+        <!-- Printing and PDF exports -->
+        <script>
+        var link = document.createElement('link');
+        link.rel = 'stylesheet';
+        link.type = 'text/css';
+        link.href = window.location.search.match(/print-pdf/gi) ? 'css/print/pdf.css' : 'css/print/paper.css';
+        document.getElementsByTagName('head')[0].appendChild(link);
+        </script>
+    </head>
+    <body>
+        <div id="left"></div>
+        <div id="right"></div>
+        <div id="top"></div>
+        <div id="bottom"></div>
+        <div class="reveal">
+            <div class="slides">
+                <section data-background="url('custom/images/logo_esquina_intro_end.svg'), linear-gradient(to right, #443548, #b71930, #e94635)" data-background-position="right bottom" data-background-repeat="no-repeat">
+                    <img class="no-border" width="5%" src="custom/images/rombo.svg"/>
+                    <img class="no-border" width="13%" src="custom/images/s4n.svg"/>
+                    <h1 class="white-font">ML</h1>
+                </section>
+                <!--Contenido-->
+                <section data-background="url('custom/images/logo_esquina.svg')" data-background-position="right bottom" data-background-repeat="no-repeat">
+                    <section>
+                        <img style="float: left" class="no-border" width="10%" src="custom/images/rombo.svg"/>
+                        <h1>Retos ML</h1>
+                    </section>
+                    <section>
+                        <img class="no-border" src="sessions/Retos/PartesML.png">
+                    </section>
+                    <section>
+                        <h2>¿Qué es Generalización?</h2>
+                    </section>
+                    <section>
+                        <blockquote cite="https://developers.google.com/machine-learning/glossary/#generalization">
+                            "Refers to your model's ability to make correct predictions on new, previously unseen data as opposed to the data used to train the model."
+                        </blockquote>
+                    </section>
+                    <section>
+                        <h2>¿Que es generalización?</h2>
+                        <p class="fragment">Predicción Entrenado vs Realidad (Nuevos datos)</p>
+                    <blockquote class="fragment" cite="https://developers.google.com/machine-learning/crash-course/generalization/peril-of-overfitting"> The fundamental tension of machine learning is between fitting our data well, but also fitting the data as simply as possible</blockquote>
+                    <p class="fragment">Ockham Razor</p>
+                </section>
+                <section>
+                    <h3>Sesgo vs Varianza</h3>
+                    <h3><i>Bias vs Variance</i></h3>
+                    <img src="sessions/Retos/BiasVsVarianza.png">
+                </section>                
+                <section>
+                    <h2>História de Brian</h2>
+                    <img class="no-border" src="sessions/Retos/BadLuckBryan.jpg">
+                </section>
+                <section>
+                    Brian quería hacer un clasificador de frutas
+                </section>
+                <section>
+                    <ol>
+                        <li>Datos</li>
+                        <li>Modelo</li>
+                        <li>Entrenamiento</li>
+                    </ol>
+                </section>
+                <section>
+                    <a href="https://drive.google.com/file/d/1zEsMzhkEF-skuPey47EudhDy1TpDx_gr/view?usp=sharing">Resumen Retos</a>
+                </section>                
+            </section>
+            <section>
+                <section>
+                    <img style="float: left" class="no-border" width="10%" src="custom/images/rombo.svg"/>
+                    <h2>Primero el objetivo y los datos!</h2>
+                </section>
+                <section>
+                    Problemas :(
+                </section>
+                <section>
+                    <h3>Cantidad insuficiente de datos entrenamiento</h3>
+                    <img class="no-border" src="sessions/Retos/manzanasYnaranjas.png">
+                </section>
+                <section>
+                    <h3>Datos no representativos</h3>
+                    <img class="no-border" src="sessions/Retos/tiposManzanas.jpeg">
+                </section>
+                <section>
+                    <h3>Mala calidad de los datos</h3>
+                    <img class="no-border" src="sessions/Retos/apple_logo.png">
+                    <img class="no-border fragment" src="sessions/Retos/junior_movie.jpeg">
+                </section>
+                <section>
+                    <h3>Características irrelevantes</h3>
+                </section>
+                <section>
+                    <h3>Extracción y selección de Características</h3>
+                    <p>Color de la fruta</p>
+                </section>
+            </section>
+            <section>
+                <section>
+                    <img style="float: left" class="no-border" width="10%" src="custom/images/rombo.svg"/>
+                    <h2>Ahora el modelo</h2>
+                    <h3>¿Qué Modelo?</h3>
+                </section>
+                <section>
+                    Tipo Problema
+                </section>
+                <section>
+                    <h3>Trade-offs</h3>
+                    <ul>
+                        <li class="fragment">Velocidad</li>
+                        <li class="fragment">Precisión</li>
+                        <li class="fragment">Complejidad Modelo</li>
+                        <ul>
+                            <li class="fragment">Precisión conjunto entrenamiento vs pruebas</li>
+                            <li class="fragment">Tamaño conjunto datos</li>
+                            <li class="fragment">Cantidad parámetros</li>
+                            <li class="fragment">Overfitting vs Underfitting</li>
+                        </ul>
+                    </ul>
+                </section>
+                <section>
+                    <img src="sessions/Retos/BalanceBiasVarianza.png">
+                </section>                
+                <section>
+                    No Free Lunch
+                </section>
+                <section>
+                    <a href="http://aka.ms/MLCheatSheet">Azure MLCheatSheet</a>
+                </section>
+                <section>
+                    <a href="https://docs.microsoft.com/en-us/azure/machine-learning/studio/algorithm-choice">Algorithm Choice</a>
+                </section>                
+            </section>
+            <section>
+                <section>
+                    <img style="float: left" class="no-border" width="10%" src="custom/images/rombo.svg"/>
+                    <h2>Entrenamiento</h2>
+                </section>
+                <section>
+                    <p>Generalización</p>
+                    <p>Comparar-Medir Soluciones</p>
+                </section>
+                <section>
+                    <h2>Generalización</h2>
+                    <h3><a target="_blank" href="https://colab.research.google.com/drive/1-q1w_yEi6o3C8i5maCHBquH56R7iovqe#forceEdit=true&offline=true&sandboxMode=true">Colab</a></h3>
+
+                    <p>Learning Rates</p>
+                </section>
+                <section>                    
+                    <p><a target="_blank" href="https://developers.google.com/machine-learning/crash-course/fitter/graph">Graph</a></p>
+                    <p><a target="_blank" href="https://developers.google.com/machine-learning/crash-course/reducing-loss/playground-exercise">PlayGround</a></p>
+                </section>
+                <section>
+                    <h2>Medidas Comparación</h2>
+                </section>
+                <section>
+                    <p>Regresión</p>
+                    <p>Clasificación</p>
+                </section>
+                <section>
+                    <h2>ROC curve</h2>
+                    <p>Receiver Operating Characteristic curve</p>                    
+                </section>
+                <section>
+                    <p>Regresión</p>
+                    <p>Matriz de confusión</p>
+                    <img class="no-border" src="sessions/Retos/Matriz_Confusion.png">
+                </section>
+                <section>
+                    <h2>Clasificación</h2>
+                    <h3><i>Precision and Recall</i></h3>
+                    <h3>Precisión y Exhaustividad</h3>
+                    <img class="no-border" src="sessions/Retos/precisionAndRecall.png">
+                </section>
+                <section>
+                    <p>$TP$ = True positive</p>
+                    <p>$FP$ = False Positive</p>
+                    <p>$FN$ = False Negative</p>
+                    <p>$TN$ = True Negative</p>
+                    <p>$Precision = \frac{TP}{TP+FP}$</p>
+                    <p>$Recall = \frac{TP}{TP+FN}$</p>
+                </section>
+                <section>
+                    <h2>Clasificación</h2>
+                    <h3>F1 Score</h3>
+                    <p>$\frac{2TP}{2TP+FP+FN}$</p>
+                </section>
+            </section>
+        </section>
+        <section>
+            <h2>Otro Conjunto de Datos</h2>
+            <a href="https://raw.githubusercontent.com/uiuc-cse/data-fa14/gh-pages/data/iris.csv">Iris</a>
+        </section>
+    </div>
+</div>
+<script src="lib/js/head.min.js"></script>
+<script src="js/reveal.js"></script>
+<script>
+// More info about config & dependencies:
+// - https://github.com/hakimel/reveal.js#configuration
+// - https://github.com/hakimel/reveal.js#dependencies
+Reveal.initialize({
+defaultTiming: 120,
+zoomKey: 'shift',
+history: true,
+progress: true,
+math: {
+mathjax: 'https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.0/MathJax.js',
+config: 'TeX-AMS_HTML-full' // See http://docs.mathjax.org/en/latest/config-files.html
+},
+dependencies: [
+{ src: 'plugin/markdown/marked.js' },
+{ src: 'plugin/markdown/markdown.js' },
+{ src: 'plugin/zoom-js/zoom.js', async: true },
+{ src: 'plugin/highlight/highlight.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } },
+{ src: 'plugin/notes/notes.js', async: true },
+{ src: 'plugin/math/math.js', async: true }
+]
+});
+</script>
+</body>
+</html>
